@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Liberia Connect - Provider Profile</title>
+<script type="text/javascript" nonce="bc035baa08054c1cbc41ff71102" src="//local.adguard.org?ts=1767391800491&amp;type=content-script&amp;dmn=contribution.usercontent.google.com&amp;app=chrome.exe&amp;css=1&amp;js=1&amp;gcss=1&amp;rel=1&amp;rji=1&amp;sbe=0"></script>
+<script type="text/javascript" nonce="bc035baa08054c1cbc41ff71102" src="//local.adguard.org?ts=1767391800491&amp;name=AdGuard%20Extra&amp;type=user-script"></script><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec13ec",
+                        "background-light": "#f8f6f8",
+                        "background-dark": "#221022",
+                        "surface-dark": "#2f1b2f", 
+                        "surface-dark-light": "#3f253f"
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #221022; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3f253f; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ec13ec; 
+        }
+        
+        /* Hide default checkbox for custom toggles */
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #ec13ec;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #ec13ec;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-x-hidden">
+<div class="relative flex min-h-screen flex-col w-full">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full bg-background-dark/95 backdrop-blur border-b border-surface-dark px-4 py-3 flex justify-center">
+<div class="w-full max-w-md flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">hub</span>
+<h1 class="text-lg font-bold tracking-tight">Edit Profile</h1>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white text-sm font-bold py-2 px-5 rounded-full transition-colors">
+                    Save
+                </button>
+</div>
+</header>
+<!-- Main Content Area - Mobile Constrained Width -->
+<main class="flex-grow flex flex-col items-center w-full py-6 px-4">
+<div class="w-full max-w-md flex flex-col gap-6">
+<!-- Online Status Card -->
+<div class="bg-surface-dark rounded-xl p-4 flex items-center justify-between border border-white/5 shadow-lg">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-500">
+<span class="material-symbols-outlined">wifi</span>
+</div>
+<div class="flex flex-col">
+<span class="font-bold text-base">Go Online</span>
+<span class="text-xs text-white/60">Visible to clients nearby</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-14 h-8 bg-surface-dark-light peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-7 after:w-7 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Photos Section -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between px-1">
+<h2 class="text-xl font-bold">My Photos</h2>
+<span class="text-xs text-primary font-medium cursor-pointer">Manage (4)</span>
+</div>
+<!-- Image Grid -->
+<div class="grid grid-cols-3 gap-3">
+<!-- Photo 1 -->
+<div class="relative aspect-square group rounded-xl overflow-hidden bg-surface-dark">
+<div class="absolute inset-0 bg-cover bg-center opacity-90" data-alt="Smiling portrait of a person in warm lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB4QO45f7FNxnYPTN0u1xnT7Yno75Q6wO2oXnKoiDhjRa59MluBdUZfAHEBGlIa4X97gI34GnHoOU-m0C81U9HuV8Spfx-UD7CflwB3qS4rsy8teXAaV-95qpSyi7sMJUY4copuhjLG2rxqnzCoESB1jh_dSLc0EpLFfds_apOKz_KteBpPI3RAeKkYqIsLDCpa2dK3NvSik3-HaLnET6rmQjSKzAC_feUrHAtZS8IdLVcoAOqz49wOF1deUBeEi7hoghQS5WTjFA0w');"></div>
+<button class="absolute top-1 right-1 bg-black/50 text-white rounded-full p-1 hover:bg-red-500 transition-colors">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<!-- Photo 2 -->
+<div class="relative aspect-square group rounded-xl overflow-hidden bg-surface-dark">
+<div class="absolute inset-0 bg-cover bg-center opacity-90" data-alt="Professional headshot of a service provider" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCWoFarsnFe4ARRxWrtF4Gs06tGSTA2RigTmNaIRANU1KtynE9Phpsoi9CobmbkQom3JfQubXDtMQbq9DTvzx9Yrqk0BhcGm6cSD1Hk4N3SQfDdQ1qHYwkr5Wgw_tIGTjkKS8goXhBUPGYu8Y746OiXZIRxhoORJ6oo0ZuJ_9iWZz2nPF5gfz6uEtz1-0XobMR8mRJeNUgUg_rCCugYwtQ0x-YyHpd_6kDueE7JiYXKL7NN5QGRmUzYztQ14snZj7Mubjqv-y_z8Z_t');"></div>
+<button class="absolute top-1 right-1 bg-black/50 text-white rounded-full p-1 hover:bg-red-500 transition-colors">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<!-- Upload Button -->
+<button class="aspect-square rounded-xl bg-surface-dark border-2 border-dashed border-white/10 flex flex-col items-center justify-center gap-2 hover:bg-surface-dark-light hover:border-primary/50 transition-all text-white/50 hover:text-primary">
+<span class="material-symbols-outlined text-3xl">add_a_photo</span>
+<span class="text-xs font-bold">Upload</span>
+</button>
+</div>
+<!-- Privacy Blur Toggle -->
+<div class="flex items-center justify-between bg-surface-dark px-4 py-3 rounded-xl mt-1">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-white/60">blur_on</span>
+<span class="text-sm font-medium">Auto-blur faces for privacy</span>
+</div>
+<input class="rounded text-primary focus:ring-primary bg-surface-dark-light border-none size-5" type="checkbox"/>
+</div>
+<!-- Upload Progress (Simulated) -->
+<div class="bg-surface-dark rounded-xl p-4 flex flex-col gap-2 mt-1">
+<div class="flex justify-between items-center text-xs font-medium">
+<span class="text-white">Compressing new photo...</span>
+<span class="text-primary">65%</span>
+</div>
+<div class="w-full bg-surface-dark-light rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 65%"></div>
+</div>
+<div class="flex items-center gap-1.5 text-[10px] text-white/40 uppercase tracking-wider font-bold">
+<span class="material-symbols-outlined text-[12px]">bolt</span>
+                            Data Saver Active
+                        </div>
+</div>
+</div>
+<!-- Location Section -->
+<div class="flex flex-col gap-3">
+<h2 class="text-xl font-bold px-1">Location</h2>
+<div class="bg-surface-dark rounded-xl p-5 flex flex-col gap-4">
+<p class="text-sm text-white/60 leading-snug">Select a landmark near you. Clients will see this approximate location, not your exact address.</p>
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-bold text-white/40 uppercase ml-1">County</label>
+<div class="relative">
+<select class="w-full bg-surface-dark-light border-none text-white text-sm rounded-lg py-3 px-4 appearance-none focus:ring-1 focus:ring-primary">
+<option>Montserrado</option>
+<option>Nimba</option>
+<option>Bong</option>
+<option>Grand Bassa</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 pointer-events-none text-white/50">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-bold text-white/40 uppercase ml-1">Nearest Landmark</label>
+<div class="relative">
+<select class="w-full bg-surface-dark-light border-none text-white text-sm rounded-lg py-3 px-4 appearance-none focus:ring-1 focus:ring-primary">
+<option>ELWA Junction</option>
+<option>Red Light Market</option>
+<option>Sinkor, 12th Street</option>
+<option>Broad Street, Snapper Hill</option>
+<option>Caldwell Bridge</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 pointer-events-none text-white/50">location_on</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Service Category Selector -->
+<div class="flex flex-col gap-3">
+<h2 class="text-xl font-bold px-1">Services Offered</h2>
+<!-- Top Level Tabs -->
+<div class="flex p-1 bg-surface-dark rounded-full">
+<button class="flex-1 py-2.5 px-4 rounded-full text-sm font-bold transition-all bg-primary text-white shadow-md">
+                            Night Life
+                        </button>
+<button class="flex-1 py-2.5 px-4 rounded-full text-sm font-bold text-white/50 hover:text-white transition-all">
+                            Day Tasks
+                        </button>
+</div>
+<!-- Sub-tags -->
+<div class="flex flex-wrap gap-2 mt-2">
+<label class="cursor-pointer group">
+<input checked="" class="peer sr-only" type="checkbox"/>
+<div class="px-4 py-2 rounded-full border border-surface-dark bg-surface-dark text-sm font-medium text-white/70 peer-checked:bg-primary/20 peer-checked:border-primary peer-checked:text-primary transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">spa</span>
+                                Massage
+                            </div>
+</label>
+<label class="cursor-pointer group">
+<input checked="" class="peer sr-only" type="checkbox"/>
+<div class="px-4 py-2 rounded-full border border-surface-dark bg-surface-dark text-sm font-medium text-white/70 peer-checked:bg-primary/20 peer-checked:border-primary peer-checked:text-primary transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">celebration</span>
+                                VIP Host
+                            </div>
+</label>
+<label class="cursor-pointer group">
+<input class="peer sr-only" type="checkbox"/>
+<div class="px-4 py-2 rounded-full border border-surface-dark bg-surface-dark text-sm font-medium text-white/70 peer-checked:bg-primary/20 peer-checked:border-primary peer-checked:text-primary transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">music_note</span>
+                                DJ
+                            </div>
+</label>
+<label class="cursor-pointer group">
+<input class="peer sr-only" type="checkbox"/>
+<div class="px-4 py-2 rounded-full border border-surface-dark bg-surface-dark text-sm font-medium text-white/70 peer-checked:bg-primary/20 peer-checked:border-primary peer-checked:text-primary transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">local_bar</span>
+                                Bartender
+                            </div>
+</label>
+<label class="cursor-pointer group">
+<input class="peer sr-only" type="checkbox"/>
+<div class="px-4 py-2 rounded-full border border-surface-dark bg-surface-dark text-sm font-medium text-white/70 peer-checked:bg-primary/20 peer-checked:border-primary peer-checked:text-primary transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">diversity_3</span>
+                                Companion
+                            </div>
+</label>
+</div>
+</div>
+<!-- Payment Info -->
+<div class="flex flex-col gap-3 pb-8">
+<h2 class="text-xl font-bold px-1">Payment Info</h2>
+<div class="bg-surface-dark rounded-xl p-5 flex flex-col gap-4">
+<div class="flex items-center gap-4 mb-2">
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="text-yellow-400 focus:ring-yellow-400 bg-transparent border-white/30" name="provider" type="radio"/>
+<span class="text-sm font-bold text-white">MTN MoMo</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="text-orange-500 focus:ring-orange-500 bg-transparent border-white/30" name="provider" type="radio"/>
+<span class="text-sm font-bold text-white">Orange Money</span>
+</label>
+</div>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="text-white/50 font-bold">+231</span>
+</div>
+<input class="w-full bg-surface-dark-light border-none text-white placeholder-white/20 text-lg font-bold rounded-lg py-3 pl-16 pr-4 focus:ring-2 focus:ring-primary" placeholder="XX XXX XXXX" type="tel" value="88 654 3210"/>
+</div>
+</div>
+</div>
+<!-- Footer / Low Data Indicator -->
+<div class="flex flex-col items-center justify-center gap-4 py-6 border-t border-white/5 text-center">
+<button class="text-red-400 text-sm font-medium hover:text-red-300">Deactivate Account</button>
+<div class="flex items-center gap-2 opacity-50">
+<span class="material-symbols-outlined text-sm">signal_cellular_alt</span>
+<span class="text-[10px] uppercase font-bold tracking-widest">Lite Mode Active</span>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

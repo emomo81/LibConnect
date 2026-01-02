@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Verify OTP - Liberia Connect</title>
+<script type="text/javascript" nonce="bc035baa08054c1cbc41ff71102" src="//local.adguard.org?ts=1767391800491&amp;type=content-script&amp;dmn=contribution.usercontent.google.com&amp;app=chrome.exe&amp;css=1&amp;js=1&amp;gcss=1&amp;rel=1&amp;rji=1&amp;sbe=0"></script>
+<script type="text/javascript" nonce="bc035baa08054c1cbc41ff71102" src="//local.adguard.org?ts=1767391800491&amp;name=AdGuard%20Extra&amp;type=user-script"></script><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec13ec",
+                        "background-light": "#f8f6f8",
+                        "background-dark": "#181118", // Matching the dark bg from examples
+                        "surface-dark": "#2a1f2a", // Slightly lighter for cards
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom styles to remove spinner from number input */
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none; 
+            margin: 0; 
+        }
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white min-h-screen flex flex-col">
+<!-- Navbar / Header (Minimal for low data) -->
+<header class="w-full py-4 px-6 md:px-10 flex justify-center md:justify-start border-b border-gray-200 dark:border-white/10">
+<div class="flex items-center gap-2">
+<div class="size-8 rounded-full bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xl">hub</span>
+</div>
+<span class="text-xl font-bold tracking-tight">Liberia Connect</span>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-grow flex items-center justify-center p-4">
+<!-- Centered Card Container -->
+<div class="w-full max-w-md mx-auto bg-white dark:bg-surface-dark rounded-xl shadow-xl overflow-hidden border border-gray-200 dark:border-white/5">
+<!-- Back Button -->
+<div class="pt-6 px-6">
+<a class="inline-flex items-center gap-1 text-sm text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">arrow_back</span>
+<span>Back to Login</span>
+</a>
+</div>
+<div class="p-6 md:p-8 flex flex-col gap-6">
+<!-- Heading Section -->
+<div class="flex flex-col gap-2 text-center md:text-left">
+<h1 class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+                        Verify Identity
+                    </h1>
+<p class="text-slate-500 dark:text-[#b99db9] text-base leading-relaxed">
+                        Enter the 4-digit code sent to your phone number ending in <span class="font-bold text-slate-700 dark:text-white">8890</span>.
+                    </p>
+</div>
+<!-- OTP Input Section -->
+<div class="flex justify-center md:justify-start py-2">
+<form class="flex gap-3 md:gap-4 w-full max-w-xs mx-auto md:mx-0 justify-between">
+<!-- Individual Inputs for 4 digits -->
+<input aria-label="Digit 1" autofocus="" class="flex h-14 w-12 md:h-16 md:w-14 text-center rounded-lg bg-gray-50 dark:bg-[#392839] border border-gray-300 dark:border-transparent focus:border-primary focus:ring-2 focus:ring-primary/50 text-2xl font-bold transition-all outline-none" inputmode="numeric" maxlength="1" pattern="[0-9]*" type="tel"/>
+<input aria-label="Digit 2" class="flex h-14 w-12 md:h-16 md:w-14 text-center rounded-lg bg-gray-50 dark:bg-[#392839] border border-gray-300 dark:border-transparent focus:border-primary focus:ring-2 focus:ring-primary/50 text-2xl font-bold transition-all outline-none" inputmode="numeric" maxlength="1" pattern="[0-9]*" type="tel"/>
+<input aria-label="Digit 3" class="flex h-14 w-12 md:h-16 md:w-14 text-center rounded-lg bg-gray-50 dark:bg-[#392839] border border-gray-300 dark:border-transparent focus:border-primary focus:ring-2 focus:ring-primary/50 text-2xl font-bold transition-all outline-none" inputmode="numeric" maxlength="1" pattern="[0-9]*" type="tel"/>
+<input aria-label="Digit 4" class="flex h-14 w-12 md:h-16 md:w-14 text-center rounded-lg bg-gray-50 dark:bg-[#392839] border border-gray-300 dark:border-transparent focus:border-primary focus:ring-2 focus:ring-primary/50 text-2xl font-bold transition-all outline-none" inputmode="numeric" maxlength="1" pattern="[0-9]*" type="tel"/>
+</form>
+</div>
+<!-- Timer / Resend Section -->
+<div class="flex flex-col items-center md:items-start gap-3">
+<div class="flex items-center gap-2 text-sm text-slate-500 dark:text-[#b99db9]">
+<span class="material-symbols-outlined text-lg">timer</span>
+<span>Resend code in <span class="font-mono font-medium text-slate-700 dark:text-white">00:30</span></span>
+</div>
+<!-- Resend Link (Disabled initially visually) -->
+<button class="text-sm font-semibold text-primary hover:text-primary/80 disabled:opacity-50 disabled:cursor-not-allowed transition-colors" disabled="">
+                        Resend Code
+                    </button>
+</div>
+<!-- Action Button -->
+<div class="pt-2">
+<button class="w-full flex items-center justify-center gap-2 rounded-full h-12 md:h-14 bg-primary hover:bg-primary/90 text-white text-base md:text-lg font-bold tracking-wide shadow-lg shadow-primary/25 transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined">check_circle</span>
+<span>Verify &amp; Continue</span>
+</button>
+</div>
+<!-- Security Note (Low data optimization hint) -->
+<div class="mt-2 p-3 rounded-lg bg-yellow-50 dark:bg-yellow-900/10 border border-yellow-200 dark:border-yellow-700/30 flex gap-3 items-start">
+<span class="material-symbols-outlined text-yellow-600 dark:text-yellow-500 shrink-0 text-xl mt-0.5">lock</span>
+<p class="text-xs text-yellow-800 dark:text-yellow-200/80 leading-snug">
+                        Your data is secure. We use minimal data for this verification process.
+                    </p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="py-6 text-center text-xs text-slate-400 dark:text-slate-600">
+<p>© 2024 Liberia Connect. Optimized for Mobile Money integration.</p>
+</footer>
+</body></html>

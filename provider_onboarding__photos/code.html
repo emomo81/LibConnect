@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Provider Onboarding: Photos - Liberia Connect</title>
+<!-- Google Fonts & Material Symbols -->
+<script type="text/javascript" nonce="bc035baa08054c1cbc41ff71102" src="//local.adguard.org?ts=1767391800491&amp;type=content-script&amp;dmn=contribution.usercontent.google.com&amp;app=chrome.exe&amp;css=1&amp;js=1&amp;gcss=1&amp;rel=1&amp;rji=1&amp;sbe=0"></script>
+<script type="text/javascript" nonce="bc035baa08054c1cbc41ff71102" src="//local.adguard.org?ts=1767391800491&amp;name=AdGuard%20Extra&amp;type=user-script"></script><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111418] dark:text-white overflow-x-hidden">
+<div class="relative flex min-h-screen flex-col">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 flex w-full items-center justify-between border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-[#101922] px-4 py-3 md:px-10">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center rounded bg-primary/10 p-1.5 text-primary">
+<span class="material-symbols-outlined text-2xl">handshake</span>
+</div>
+<h1 class="text-lg font-bold leading-tight tracking-tight text-[#111418] dark:text-white">Liberia Connect</h1>
+</div>
+<button class="flex items-center gap-2 text-sm font-medium text-primary hover:opacity-80">
+<span class="material-symbols-outlined text-lg">help</span>
+<span class="hidden sm:inline">Help</span>
+</button>
+</header>
+<main class="flex flex-1 flex-col items-center justify-start px-4 py-6 sm:px-6 lg:px-8">
+<div class="w-full max-w-md space-y-6">
+<!-- Progress Bar -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between text-sm font-medium text-[#111418] dark:text-white">
+<span>Step 3 of 4</span>
+<span class="text-gray-500 dark:text-gray-400">75% Completed</span>
+</div>
+<div class="h-2 w-full overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700">
+<div class="h-full bg-primary transition-all duration-300" style="width: 75%"></div>
+</div>
+</div>
+<!-- Page Heading -->
+<div class="space-y-2">
+<h2 class="text-2xl font-bold tracking-tight text-[#111418] dark:text-white sm:text-3xl">Add Your Photo</h2>
+<p class="text-base text-gray-500 dark:text-gray-400">Clients trust providers they can see. Upload a clear photo of yourself for your profile.</p>
+</div>
+<!-- Main Content Card -->
+<div class="rounded-xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-[#1A2632]">
+<!-- Upload Area -->
+<div class="relative flex flex-col items-center justify-center gap-4 rounded-lg border-2 border-dashed border-gray-300 bg-gray-50 px-6 py-10 transition hover:border-primary/50 dark:border-gray-700 dark:bg-gray-800/50">
+<!-- Placeholder/Icon -->
+<div class="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-3xl">add_a_photo</span>
+</div>
+<div class="text-center">
+<p class="text-sm font-medium text-[#111418] dark:text-white">Tap to upload or drag photo here</p>
+<p class="mt-1 text-xs text-gray-500 dark:text-gray-400">Supports JPG, PNG (Max 2MB)</p>
+</div>
+<input accept="image/*" aria-label="Upload photo" class="absolute inset-0 cursor-pointer opacity-0" id="file-upload" type="file"/>
+<button class="pointer-events-none mt-2 flex h-9 items-center justify-center rounded-lg bg-white px-4 text-sm font-bold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 dark:bg-gray-700 dark:text-white dark:ring-gray-600">
+                            Choose File
+                        </button>
+</div>
+<!-- Selected File Preview (Simulation) -->
+<!-- In a real app, this would appear after file selection. Showing it here as a 'filled' state example or hidden by default -->
+<!-- <div class="mt-4 flex items-center gap-3 rounded-lg border border-gray-200 p-3 dark:border-gray-700">
+                        <div class="h-12 w-12 flex-shrink-0 overflow-hidden rounded bg-gray-100 dark:bg-gray-800">
+                            <img src="https://via.placeholder.com/150" alt="Preview" class="h-full w-full object-cover">
+                        </div>
+                        <div class="flex-1 overflow-hidden">
+                            <p class="truncate text-sm font-medium text-[#111418] dark:text-white">my-profile-photo.jpg</p>
+                            <p class="text-xs text-green-600 dark:text-green-400">Ready to upload</p>
+                        </div>
+                        <button class="text-gray-400 hover:text-red-500">
+                            <span class="material-symbols-outlined">close</span>
+                        </button>
+                    </div> -->
+<!-- Low Data Warning -->
+<div class="mt-4 flex items-start gap-2 rounded bg-blue-50 p-3 text-xs text-blue-800 dark:bg-blue-900/20 dark:text-blue-200">
+<span class="material-symbols-outlined text-sm">wifi_tethering</span>
+<p>Low Data Mode active. Image will be automatically compressed before upload.</p>
+</div>
+<hr class="my-6 border-gray-200 dark:border-gray-700"/>
+<!-- Night Life Privacy Settings -->
+<div class="space-y-4">
+<div class="flex items-center gap-2">
+<div class="flex h-8 w-8 items-center justify-center rounded-full bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-300">
+<span class="material-symbols-outlined text-lg">nights_stay</span>
+</div>
+<h3 class="text-base font-bold text-[#111418] dark:text-white">Night Life Privacy</h3>
+</div>
+<label class="relative flex cursor-pointer items-start gap-3 rounded-lg border border-gray-200 p-3 hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-800/50">
+<div class="flex h-6 items-center">
+<input class="h-5 w-5 rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" type="checkbox"/>
+</div>
+<div class="flex-1">
+<span class="block text-sm font-medium text-[#111418] dark:text-white">Blur face for Night services</span>
+<span class="mt-1 block text-xs text-gray-500 dark:text-gray-400">Protect your identity. Only confirmed clients will see your unblurred photo after booking.</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-3 pt-2 sm:flex-row-reverse">
+<button class="flex h-12 w-full items-center justify-center rounded-lg bg-primary px-6 text-sm font-bold text-white transition hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-500/20 sm:w-auto sm:flex-1">
+                        Save &amp; Continue
+                    </button>
+<button class="flex h-12 w-full items-center justify-center rounded-lg bg-white px-6 text-sm font-bold text-[#111418] shadow-sm ring-1 ring-inset ring-gray-300 transition hover:bg-gray-50 dark:bg-[#1A2632] dark:text-white dark:ring-gray-700 dark:hover:bg-gray-800 sm:w-auto sm:min-w-[120px]">
+                        Back
+                    </button>
+</div>
+<p class="text-center text-xs text-gray-400 dark:text-gray-600">
+                    Step 3/4 · Account Setup
+                </p>
+</div>
+</main>
+</div>
+</body></html>

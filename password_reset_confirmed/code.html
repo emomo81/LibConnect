@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Password Reset Confirmed - Liberia Connect</title>
+<!-- Google Fonts: Plus Jakarta Sans -->
+<script type="text/javascript" nonce="bc035baa08054c1cbc41ff71102" src="//local.adguard.org?ts=1767391800491&amp;type=content-script&amp;dmn=contribution.usercontent.google.com&amp;app=chrome.exe&amp;css=1&amp;js=1&amp;gcss=1&amp;rel=1&amp;rji=1&amp;sbe=0"></script>
+<script type="text/javascript" nonce="bc035baa08054c1cbc41ff71102" src="//local.adguard.org?ts=1767391800491&amp;name=AdGuard%20Extra&amp;type=user-script"></script><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec13ec",
+                        "background-light": "#f8f6f8",
+                        "background-dark": "#221022",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display antialiased text-slate-900 dark:text-white transition-colors duration-200">
+<!-- Header / Top Navigation -->
+<header class="w-full border-b border-slate-200 dark:border-[#392839] px-4 md:px-10 py-3 flex items-center justify-between bg-background-light dark:bg-background-dark">
+<div class="flex items-center gap-3">
+<div class="size-8 text-slate-900 dark:text-white">
+<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_319)">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+</g>
+<defs>
+<clippath id="clip0_6_319"><rect fill="white" height="48" width="48"></rect></clippath>
+</defs>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] hidden sm:block">Liberia Connect</h2>
+</div>
+<!-- Minimalist header for this specific flow -->
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col items-center justify-center p-6 w-full">
+<!-- Content Container: Constrained width for mobile-first feel on desktop -->
+<div class="flex flex-col items-center max-w-[400px] w-full gap-8 text-center animate-in fade-in zoom-in duration-500">
+<!-- Success Icon: Replaces heavy image for low-data optimization -->
+<div class="relative flex items-center justify-center">
+<!-- Outer glow ring -->
+<div class="absolute inset-0 bg-primary/20 rounded-full blur-xl scale-150"></div>
+<!-- Icon container -->
+<div class="relative flex items-center justify-center size-24 rounded-full bg-background-light dark:bg-[#2d152d] border-4 border-primary/20 shadow-xl">
+<span class="material-symbols-outlined text-primary text-[48px] font-bold" style="font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 0, 'opsz' 48;">check</span>
+</div>
+</div>
+<!-- Text Content -->
+<div class="flex flex-col gap-3">
+<h1 class="text-2xl md:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+                    Password Reset Successful
+                </h1>
+<p class="text-slate-600 dark:text-gray-400 text-sm md:text-base leading-relaxed">
+                    Your password has been updated. You can now log in to Liberia Connect using your new credentials.
+                </p>
+</div>
+<!-- Actions -->
+<div class="flex flex-col gap-5 w-full mt-2">
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary hover:bg-[#d912d9] active:scale-[0.98] transition-all text-white text-base font-bold shadow-lg shadow-primary/25">
+<span class="truncate">Log In Now</span>
+</button>
+<a class="text-sm font-medium text-slate-500 dark:text-slate-500 hover:text-primary dark:hover:text-primary transition-colors py-2" href="#">
+                    Having trouble? <span class="underline decoration-slate-300 dark:decoration-slate-700 underline-offset-4">Contact Support</span>
+</a>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-6 text-center border-t border-slate-200 dark:border-[#392839] mt-auto bg-background-light dark:bg-background-dark">
+<p class="text-slate-400 dark:text-slate-600 text-xs font-medium">Liberia Connect © 2024</p>
+</footer>
+</body></html>

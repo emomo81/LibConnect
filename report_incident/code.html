@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Report Incident - Liberia Connect</title>
+<script type="text/javascript" nonce="bc035baa08054c1cbc41ff71102" src="//local.adguard.org?ts=1767391800491&amp;type=content-script&amp;dmn=contribution.usercontent.google.com&amp;app=chrome.exe&amp;css=1&amp;js=1&amp;gcss=1&amp;rel=1&amp;rji=1&amp;sbe=0"></script>
+<script type="text/javascript" nonce="bc035baa08054c1cbc41ff71102" src="//local.adguard.org?ts=1767391800491&amp;name=AdGuard%20Extra&amp;type=user-script"></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ecc8",
+                        "primary-dark": "#0ebca0",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#10221f",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display flex flex-col min-h-screen text-[#111817] dark:text-white overflow-x-hidden">
+<!-- Mobile Container Wrapper for Desktop View -->
+<div class="flex flex-col items-center justify-start min-h-screen w-full py-0 md:py-10">
+<!-- Main Content Card (Simulating Mobile View on Desktop) -->
+<div class="w-full max-w-md bg-white dark:bg-[#1a2c29] md:rounded-xl shadow-none md:shadow-lg overflow-hidden flex flex-col min-h-screen md:min-h-0 md:h-auto border-x-0 md:border md:border-gray-100 dark:border-gray-800">
+<!-- Header -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f4f4] dark:border-b-gray-800 px-5 py-4 bg-white dark:bg-[#1a2c29] sticky top-0 z-10">
+<div class="flex items-center gap-3">
+<button class="text-[#111817] dark:text-white flex items-center justify-center p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h2 class="text-[#111817] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Report Incident</h2>
+</div>
+<!-- Branding Icon -->
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+</svg>
+</div>
+</header>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto">
+<!-- Intro Section -->
+<div class="p-5 pb-2">
+<h1 class="text-[#111817] dark:text-white text-2xl font-black leading-tight tracking-tight mb-2">Something went wrong?</h1>
+<p class="text-[#618983] dark:text-gray-400 text-sm font-normal leading-normal">Help keep Liberia Connect safe for everyone. Please describe the issue honestly and clearly.</p>
+</div>
+<!-- Policy Warning Card -->
+<div class="px-5 py-2">
+<div class="flex gap-3 bg-[#fff4f2] dark:bg-red-900/20 border border-red-100 dark:border-red-900/50 rounded-lg p-4">
+<div class="text-red-600 dark:text-red-400 shrink-0">
+<span class="material-symbols-outlined">warning</span>
+</div>
+<div class="flex flex-col">
+<p class="text-[#111817] dark:text-white text-sm font-bold leading-tight mb-1">Fairness Policy</p>
+<p class="text-[#618983] dark:text-gray-300 text-xs leading-normal">Verified reports are taken seriously. Accounts receive a <span class="font-bold text-red-600 dark:text-red-400">permanent ban</span> after 2 verified strikes.</p>
+</div>
+</div>
+</div>
+<!-- Report Form -->
+<form class="flex flex-col gap-6 p-5">
+<!-- Segmented Control: Who to Report -->
+<div class="flex flex-col gap-2">
+<span class="text-[#111817] dark:text-white text-sm font-medium">Who are you reporting?</span>
+<div class="flex h-12 w-full items-center rounded-lg bg-[#f0f4f4] dark:bg-[#233532] p-1">
+<label class="cursor-pointer h-full flex-1 relative flex items-center justify-center rounded-md transition-all duration-200 has-[:checked]:bg-white dark:has-[:checked]:bg-[#2f4541] has-[:checked]:shadow-sm has-[:checked]:text-[#111817] dark:has-[:checked]:text-primary text-[#618983] dark:text-gray-400">
+<input checked="" class="peer sr-only" name="report_target" type="radio" value="client"/>
+<span class="text-sm font-semibold z-10 relative">Report Client</span>
+</label>
+<label class="cursor-pointer h-full flex-1 relative flex items-center justify-center rounded-md transition-all duration-200 has-[:checked]:bg-white dark:has-[:checked]:bg-[#2f4541] has-[:checked]:shadow-sm has-[:checked]:text-[#111817] dark:has-[:checked]:text-primary text-[#618983] dark:text-gray-400">
+<input class="peer sr-only" name="report_target" type="radio" value="provider"/>
+<span class="text-sm font-semibold z-10 relative">Report Provider</span>
+</label>
+</div>
+</div>
+<!-- Dropdown: Reason -->
+<label class="flex flex-col gap-2">
+<span class="text-[#111817] dark:text-white text-sm font-medium">Reason for report</span>
+<div class="relative">
+<select class="w-full appearance-none rounded-lg border border-[#dbe6e4] dark:border-gray-600 bg-white dark:bg-[#1a2c29] h-14 px-4 pr-10 text-[#111817] dark:text-white placeholder:text-[#618983] focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-base">
+<option disabled="" selected="" value="">Select a reason...</option>
+<option value="payment">Refusal to Pay / Payment Issue</option>
+<option value="noshow">No Show / Late Arrival</option>
+<option value="harassment">Harassment or Abuse</option>
+<option value="quality">Poor Service Quality</option>
+<option value="safety">Safety Concern</option>
+<option value="other">Other</option>
+</select>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-[#618983] dark:text-gray-400">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</label>
+<!-- Textarea: Description -->
+<label class="flex flex-col gap-2">
+<span class="text-[#111817] dark:text-white text-sm font-medium">Describe what happened</span>
+<textarea class="w-full min-h-[120px] rounded-lg border border-[#dbe6e4] dark:border-gray-600 bg-white dark:bg-[#1a2c29] p-4 text-[#111817] dark:text-white placeholder:text-[#618983] focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-base resize-none" placeholder="Please provide details about the incident. Be as specific as possible regarding time, location, and agreements made."></textarea>
+<div class="flex justify-between items-center text-xs text-[#618983] dark:text-gray-500 px-1">
+<span>Minimum 20 characters</span>
+<span>0/500</span>
+</div>
+</label>
+<!-- Optional Attachment -->
+<div class="flex flex-col gap-2">
+<span class="text-[#111817] dark:text-white text-sm font-medium">Evidence (Optional)</span>
+<label class="cursor-pointer flex items-center gap-3 w-full p-3 rounded-lg border border-dashed border-[#dbe6e4] dark:border-gray-600 hover:bg-[#f0f4f4] dark:hover:bg-[#233532] transition-colors group">
+<div class="size-10 bg-[#f0f4f4] dark:bg-[#233532] group-hover:bg-white dark:group-hover:bg-[#2f4541] rounded-full flex items-center justify-center text-[#618983] dark:text-gray-400">
+<span class="material-symbols-outlined">attach_file</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-medium text-[#111817] dark:text-white">Attach screenshot or photo</span>
+<span class="text-xs text-[#618983] dark:text-gray-500">Max 2MB. JPG or PNG only.</span>
+</div>
+<input accept="image/*" class="hidden" type="file"/>
+</label>
+</div>
+<!-- Submit Button -->
+<div class="pt-2">
+<button class="w-full h-12 bg-primary hover:bg-primary-dark text-[#10221f] font-bold text-base rounded-lg shadow-sm active:scale-[0.98] transition-all flex items-center justify-center gap-2" type="button">
+<span>Submit Report</span>
+<span class="material-symbols-outlined text-lg">send</span>
+</button>
+<p class="text-center mt-4 text-xs text-[#618983] dark:text-gray-500">
+                            By submitting, you agree that your report is truthful. False reporting may lead to account suspension.
+                        </p>
+</div>
+</form>
+</div>
+</div>
+<!-- Desktop Footer Link (Outside the mobile container) -->
+<div class="hidden md:block mt-6">
+<a class="text-sm text-[#618983] hover:text-[#111817] dark:text-gray-500 dark:hover:text-white transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+                Back to Dashboard
+            </a>
+</div>
+</div>
+</body></html>

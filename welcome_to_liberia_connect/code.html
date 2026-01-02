@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Liberia Connect</title>
+<!-- Fonts -->
+<script type="text/javascript" nonce="bc035baa08054c1cbc41ff71102" src="//local.adguard.org?ts=1767391800491&amp;type=content-script&amp;dmn=contribution.usercontent.google.com&amp;app=chrome.exe&amp;css=1&amp;js=1&amp;gcss=1&amp;rel=1&amp;rji=1&amp;sbe=0"></script>
+<script type="text/javascript" nonce="bc035baa08054c1cbc41ff71102" src="//local.adguard.org?ts=1767391800491&amp;name=AdGuard%20Extra&amp;type=user-script"></script><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec5b",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102216",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white transition-colors duration-200">
+<div class="relative flex min-h-screen flex-col overflow-x-hidden">
+<!-- Header -->
+<header class="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/80 dark:bg-[#102216]/90 dark:border-gray-800 backdrop-blur-md">
+<div class="mx-auto flex h-16 max-w-5xl items-center justify-between px-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center rounded-lg bg-primary/20 p-2 text-green-700 dark:text-green-400">
+<span class="material-symbols-outlined">hub</span>
+</div>
+<span class="text-lg font-bold tracking-tight text-slate-900 dark:text-white">Liberia Connect</span>
+</div>
+<div class="flex items-center gap-2 sm:gap-4">
+<!-- Data Saver Chip -->
+<div class="hidden sm:flex h-8 items-center justify-center gap-x-2 rounded-full bg-green-50 border border-green-100 px-3 dark:bg-green-900/30 dark:border-green-800">
+<span class="material-symbols-outlined text-green-700 dark:text-green-400 text-[18px]">bolt</span>
+<p class="text-xs font-bold text-green-800 dark:text-green-300">Data Saver: On</p>
+</div>
+<!-- Language Toggle -->
+<button class="flex h-9 items-center justify-center rounded-lg bg-gray-100 px-3 text-sm font-semibold text-slate-700 transition hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700">
+                        EN
+                    </button>
+<!-- Mobile Menu Icon (Visual Only) -->
+<button class="sm:hidden p-1 text-slate-700 dark:text-gray-200">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<div class="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-8 sm:px-6 lg:px-8">
+<!-- Hero Section: Text focused for low data -->
+<section class="flex flex-col items-center justify-center rounded-2xl bg-gradient-to-br from-green-50 via-white to-gray-50 p-8 text-center shadow-sm dark:from-green-900/20 dark:via-background-dark dark:to-gray-900 dark:border dark:border-gray-800">
+<div class="mb-4 inline-flex items-center rounded-full border border-green-200 bg-white px-3 py-1 shadow-sm dark:bg-gray-800 dark:border-gray-700">
+<span class="flex h-2 w-2 rounded-full bg-primary animate-pulse mr-2"></span>
+<span class="text-xs font-medium text-slate-600 dark:text-gray-300">Live marketplace</span>
+</div>
+<h1 class="mb-4 max-w-2xl text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-6xl">
+                        Liberia's Marketplace. <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-400">Fast. Simple.</span>
+</h1>
+<p class="mb-8 max-w-lg text-lg text-slate-600 dark:text-gray-400">
+                        Connect with local providers instantly. Save data while you find the help you need.
+                    </p>
+<div class="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+<button class="inline-flex h-12 items-center justify-center rounded-lg bg-primary px-8 text-base font-bold text-slate-900 shadow-sm transition-transform hover:scale-[1.02] active:scale-[0.98]">
+                            Find Help
+                        </button>
+<button class="inline-flex h-12 items-center justify-center rounded-lg border border-gray-200 bg-white px-8 text-base font-bold text-slate-700 shadow-sm transition-colors hover:bg-gray-50 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-700">
+                            Offer Services
+                        </button>
+</div>
+</section>
+<!-- Trust Signals / Mobile Money -->
+<div class="flex w-full flex-col items-center justify-center gap-4 rounded-xl border border-dashed border-gray-300 bg-gray-50/50 py-4 dark:border-gray-700 dark:bg-gray-900/50">
+<p class="text-sm font-medium text-slate-500 dark:text-gray-400">Secure Payments Integration</p>
+<div class="flex items-center gap-6 opacity-75 grayscale transition hover:grayscale-0 hover:opacity-100">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-500">account_balance_wallet</span>
+<span class="font-bold text-slate-700 dark:text-gray-300">Orange Money</span>
+</div>
+<div class="h-4 w-px bg-gray-300 dark:bg-gray-700"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-yellow-500">payments</span>
+<span class="font-bold text-slate-700 dark:text-gray-300">MTN Mobile Money</span>
+</div>
+</div>
+</div>
+<!-- Main Entry Points -->
+<div class="grid gap-6 md:grid-cols-2">
+<!-- Day Tasks Card -->
+<div class="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:bg-gray-800 dark:border-gray-700">
+<div class="absolute -right-6 -top-6 h-32 w-32 rounded-full bg-green-50 transition-transform group-hover:scale-110 dark:bg-green-900/20"></div>
+<div class="relative z-10 flex flex-col gap-4">
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-400">
+<span class="material-symbols-outlined text-3xl">wb_sunny</span>
+</div>
+<div>
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white">Day Services</h2>
+<p class="mt-2 text-slate-600 dark:text-gray-400">Domestic help, repairs, cleaning, and errands. Verified providers ready to work.</p>
+</div>
+<ul class="mt-2 space-y-2 text-sm text-slate-500 dark:text-gray-400">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-primary">check_circle</span>
+                                    Home Repairs &amp; Maintenance
+                                </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-primary">check_circle</span>
+                                    Cleaning &amp; Laundry
+                                </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-primary">check_circle</span>
+                                    Delivery &amp; Errands
+                                </li>
+</ul>
+<button class="mt-4 flex w-full items-center justify-between rounded-lg bg-gray-50 px-4 py-3 font-bold text-slate-900 transition-colors group-hover:bg-primary group-hover:text-slate-900 dark:bg-gray-700 dark:text-white dark:group-hover:bg-primary dark:group-hover:text-slate-900">
+<span>Browse Day Tasks</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Night Life Card (Gated) -->
+<div class="group relative overflow-hidden rounded-2xl bg-slate-900 p-6 shadow-sm text-white">
+<!-- Abstract glow for "Night" vibe -->
+<div class="absolute inset-0 bg-gradient-to-b from-slate-800 to-slate-950 opacity-100"></div>
+<div class="absolute -right-10 top-10 h-64 w-64 rounded-full bg-purple-900/20 blur-3xl"></div>
+<div class="relative z-10 flex flex-col gap-4">
+<div class="flex items-start justify-between">
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-800 text-purple-400 shadow-inner">
+<span class="material-symbols-outlined text-3xl">nightlife</span>
+</div>
+<span class="flex items-center gap-1 rounded border border-red-500/30 bg-red-500/10 px-2 py-1 text-xs font-bold text-red-400">
+<span class="material-symbols-outlined text-sm">lock</span>
+                                    18+ ONLY
+                                </span>
+</div>
+<div>
+<h2 class="text-2xl font-bold text-white">Night Life</h2>
+<p class="mt-2 text-slate-300">Entertainment, clubs, and adult services. Age verification is required for access.</p>
+</div>
+<ul class="mt-2 space-y-2 text-sm text-slate-400">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-purple-400">local_bar</span>
+                                    Clubs &amp; Lounges
+                                </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-purple-400">music_note</span>
+                                    Live Events
+                                </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-purple-400">verified_user</span>
+                                    Verified Escorts
+                                </li>
+</ul>
+<button class="mt-4 flex w-full items-center justify-between rounded-lg border border-slate-700 bg-slate-800 px-4 py-3 font-bold text-white transition-colors hover:bg-slate-700 hover:border-slate-600">
+<span>Verify Age &amp; Enter</span>
+<span class="material-symbols-outlined text-slate-400">login</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="mt-auto border-t border-gray-200 bg-white py-8 dark:bg-[#102216] dark:border-gray-800">
+<div class="mx-auto flex max-w-5xl flex-col items-center gap-6 px-4 text-center sm:px-6 lg:px-8">
+<div class="flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm font-medium text-slate-600 dark:text-gray-400">
+<a class="hover:text-primary transition-colors" href="#">About Us</a>
+<a class="hover:text-primary transition-colors" href="#">Safety Guidelines</a>
+<a class="hover:text-primary transition-colors" href="#">Provider Sign-up</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col items-center gap-2">
+<p class="text-xs text-slate-400 dark:text-gray-600">© 2024 Liberia Connect. Optimized for low bandwidth.</p>
+<div class="flex items-center gap-1 text-[10px] text-slate-400 dark:text-gray-600">
+<span class="material-symbols-outlined text-[14px]">eco</span>
+<span>Data Lite Mode Active</span>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

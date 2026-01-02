@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Provider Dashboard - Liberia Connect</title>
+<!-- Google Fonts: Inter -->
+<script type="text/javascript" nonce="bc035baa08054c1cbc41ff71102" src="//local.adguard.org?ts=1767391800491&amp;type=content-script&amp;dmn=contribution.usercontent.google.com&amp;app=chrome.exe&amp;css=1&amp;js=1&amp;gcss=1&amp;rel=1&amp;rji=1&amp;sbe=0"></script>
+<script type="text/javascript" nonce="bc035baa08054c1cbc41ff71102" src="//local.adguard.org?ts=1767391800491&amp;name=AdGuard%20Extra&amp;type=user-script"></script><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "primary-dark": "#0e62b8",
+                        "secondary": "#617589",
+                        "danger": "#dc2626",
+                        "success": "#16a34a",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2632",
+                        "border-light": "#dbe0e6",
+                        "border-dark": "#2a3b4d",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem", 
+                        "lg": "0.5rem", 
+                        "xl": "0.75rem", 
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+        /* Mobile simulator container style */
+        .mobile-container {
+            max-width: 480px;
+            margin: 0 auto;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white overflow-y-scroll">
+<!-- Desktop Wrapper to simulate mobile view -->
+<div class="w-full flex justify-center bg-gray-100 dark:bg-black py-0 sm:py-8">
+<div class="mobile-container relative flex flex-col bg-surface-light dark:bg-surface-dark w-full overflow-hidden sm:rounded-xl border border-border-light dark:border-border-dark">
+<!-- Top Header -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-border-light dark:border-border-dark px-4 py-3 sticky top-0 bg-surface-light dark:bg-surface-dark z-20">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">handshake</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Liberia Connect</h2>
+</div>
+<button class="flex items-center justify-center overflow-hidden rounded-lg h-9 px-3 bg-danger text-white text-sm font-bold shadow-sm active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[18px] mr-1">emergency_home</span>
+<span>SOS</span>
+</button>
+</header>
+<!-- Main Scrollable Content -->
+<main class="flex-1 overflow-y-auto pb-24">
+<!-- Greeting & Status Header -->
+<div class="p-4 pb-2">
+<div class="flex flex-col gap-1">
+<p class="text-2xl font-bold leading-tight">Hello, Samuel</p>
+<p class="text-secondary dark:text-slate-400 text-sm font-normal">Provider ID: #LC-8821</p>
+</div>
+</div>
+<!-- Status Card (Optimized for Data - No big images) -->
+<div class="px-4 py-2">
+<div class="flex items-center justify-between gap-4 rounded-lg bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark p-4 shadow-sm">
+<div class="flex items-center gap-3">
+<div class="relative">
+<span class="material-symbols-outlined text-success text-3xl">check_circle</span>
+<span class="absolute top-0 right-0 flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-success opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-success"></span>
+</span>
+</div>
+<div class="flex flex-col">
+<p class="text-base font-bold leading-tight text-gray-900 dark:text-white">Active</p>
+<p class="text-secondary dark:text-slate-400 text-xs font-normal">Visible in Monrovia (Sinkor)</p>
+</div>
+</div>
+<button class="rounded-lg h-8 px-3 bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark text-xs font-medium">
+                            Manage
+                        </button>
+</div>
+</div>
+<!-- Action Panel: Verification Notice -->
+<div class="px-4 py-2">
+<div class="flex flex-col gap-3 rounded-lg border border-primary/20 bg-primary/5 p-4">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-0.5">verified_user</span>
+<div class="flex flex-col gap-1">
+<p class="text-sm font-bold leading-tight text-gray-900 dark:text-white">Verify to Earn More</p>
+<p class="text-secondary dark:text-slate-400 text-xs leading-normal">Upload your National ID to unlock high-value commercial jobs.</p>
+</div>
+</div>
+<button class="w-full h-9 rounded-lg bg-primary text-white text-sm font-medium hover:bg-primary-dark transition-colors">
+                            Upload ID Now
+                        </button>
+</div>
+</div>
+<!-- Stats Grid -->
+<div class="px-4 py-4">
+<h3 class="text-sm font-bold text-secondary dark:text-slate-400 uppercase tracking-wider mb-3">Overview</h3>
+<div class="grid grid-cols-2 gap-3">
+<!-- Wallet -->
+<div class="flex flex-col gap-1 rounded-lg p-4 bg-gray-50 dark:bg-[#1e2a36] border border-border-light dark:border-border-dark">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-lg">account_balance_wallet</span>
+<p class="text-xs font-medium text-secondary dark:text-slate-400">Wallet (LRD)</p>
+</div>
+<p class="text-xl font-bold leading-tight">1,500</p>
+<a class="text-xs text-primary mt-1 font-medium" href="#">Top up &gt;</a>
+</div>
+<!-- Earnings -->
+<div class="flex flex-col gap-1 rounded-lg p-4 bg-gray-50 dark:bg-[#1e2a36] border border-border-light dark:border-border-dark">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-green-600 text-lg">payments</span>
+<p class="text-xs font-medium text-secondary dark:text-slate-400">Earnings</p>
+</div>
+<p class="text-xl font-bold leading-tight">15,000</p>
+<span class="text-[10px] text-green-600 font-medium">+2,000 this week</span>
+</div>
+<!-- Contacts -->
+<div class="flex flex-col gap-1 rounded-lg p-4 bg-gray-50 dark:bg-[#1e2a36] border border-border-light dark:border-border-dark">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-purple-500 text-lg">contacts</span>
+<p class="text-xs font-medium text-secondary dark:text-slate-400">Contacts</p>
+</div>
+<p class="text-xl font-bold leading-tight">12</p>
+</div>
+<!-- Views -->
+<div class="flex flex-col gap-1 rounded-lg p-4 bg-gray-50 dark:bg-[#1e2a36] border border-border-light dark:border-border-dark">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-orange-500 text-lg">visibility</span>
+<p class="text-xs font-medium text-secondary dark:text-slate-400">Profile Views</p>
+</div>
+<p class="text-xl font-bold leading-tight">85</p>
+</div>
+</div>
+</div>
+<!-- Quick Actions Menu -->
+<div class="px-4 py-2">
+<div class="flex justify-between items-center gap-2 bg-white dark:bg-[#1a2632] p-2 rounded-xl border border-border-light dark:border-border-dark shadow-sm">
+<button class="flex-1 flex flex-col items-center gap-1 p-2 rounded hover:bg-gray-50 dark:hover:bg-gray-800">
+<div class="h-10 w-10 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">edit</span>
+</div>
+<span class="text-[10px] font-medium text-center">Edit Profile</span>
+</button>
+<button class="flex-1 flex flex-col items-center gap-1 p-2 rounded hover:bg-gray-50 dark:hover:bg-gray-800">
+<div class="h-10 w-10 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">design_services</span>
+</div>
+<span class="text-[10px] font-medium text-center">Services</span>
+</button>
+<button class="flex-1 flex flex-col items-center gap-1 p-2 rounded hover:bg-gray-50 dark:hover:bg-gray-800">
+<div class="h-10 w-10 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">history</span>
+</div>
+<span class="text-[10px] font-medium text-center">History</span>
+</button>
+<button class="flex-1 flex flex-col items-center gap-1 p-2 rounded hover:bg-gray-50 dark:hover:bg-gray-800">
+<div class="h-10 w-10 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">support_agent</span>
+</div>
+<span class="text-[10px] font-medium text-center">Support</span>
+</button>
+</div>
+</div>
+<!-- Recent Inquiries List -->
+<div class="px-4 py-4">
+<div class="flex items-center justify-between mb-3">
+<h3 class="text-sm font-bold text-secondary dark:text-slate-400 uppercase tracking-wider">Recent Leads</h3>
+<a class="text-sm font-medium text-primary" href="#">View All</a>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Inquiry Item 1 -->
+<div class="flex flex-col gap-3 rounded-lg border border-border-light dark:border-border-dark bg-white dark:bg-[#1e2a36] p-4 shadow-sm">
+<div class="flex justify-between items-start">
+<div class="flex gap-3">
+<div class="h-10 w-10 rounded bg-gray-100 dark:bg-gray-700 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-gray-500">plumbing</span>
+</div>
+<div>
+<p class="font-bold text-sm text-gray-900 dark:text-white">Plumbing Repair</p>
+<div class="flex items-center gap-1 text-xs text-secondary dark:text-slate-400 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span>Paynesville, 10m ago</span>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full h-px bg-border-light dark:bg-border-dark"></div>
+<div class="flex items-center justify-between">
+<span class="text-xs font-medium text-secondary dark:text-slate-400">Client verified via Mobile Money</span>
+<button class="h-8 px-4 bg-primary text-white text-xs font-bold rounded-lg flex items-center gap-1">
+<span>Unlock</span>
+<span class="opacity-75 font-normal">(50 LRD)</span>
+</button>
+</div>
+</div>
+<!-- Inquiry Item 2 -->
+<div class="flex flex-col gap-3 rounded-lg border border-border-light dark:border-border-dark bg-white dark:bg-[#1e2a36] p-4 shadow-sm">
+<div class="flex justify-between items-start">
+<div class="flex gap-3">
+<div class="h-10 w-10 rounded bg-gray-100 dark:bg-gray-700 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-gray-500">bolt</span>
+</div>
+<div>
+<p class="font-bold text-sm text-gray-900 dark:text-white">Generator Maintenance</p>
+<div class="flex items-center gap-1 text-xs text-secondary dark:text-slate-400 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span>Mamba Point, 45m ago</span>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full h-px bg-border-light dark:bg-border-dark"></div>
+<div class="flex items-center justify-between">
+<span class="text-xs font-medium text-secondary dark:text-slate-400">Client rating: 4.8</span>
+<button class="h-8 px-4 bg-primary text-white text-xs font-bold rounded-lg flex items-center gap-1">
+<span>Unlock</span>
+<span class="opacity-75 font-normal">(50 LRD)</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="h-8"></div> <!-- Spacer for scrolling -->
+</main>
+<!-- Bottom Navigation -->
+<nav class="absolute bottom-0 w-full bg-surface-light dark:bg-surface-dark border-t border-border-light dark:border-border-dark px-2 py-2 flex justify-between items-center z-10">
+<a class="flex flex-col items-center gap-1 p-2 min-w-[64px] text-primary" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 min-w-[64px] text-secondary dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<div class="relative">
+<span class="material-symbols-outlined">work</span>
+<span class="absolute -top-1 -right-1 h-2 w-2 rounded-full bg-danger"></span>
+</div>
+<span class="text-[10px] font-medium">Jobs</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 min-w-[64px] text-secondary dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span class="text-[10px] font-medium">Wallet</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 min-w-[64px] text-secondary dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</nav>
+</div>
+</div>
+</body></html>

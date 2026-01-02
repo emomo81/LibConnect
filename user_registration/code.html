@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Liberia Connect - User Registration</title>
+<!-- Google Fonts: Inter -->
+<script type="text/javascript" nonce="bc035baa08054c1cbc41ff71102" src="//local.adguard.org?ts=1767391800491&amp;type=content-script&amp;dmn=contribution.usercontent.google.com&amp;app=chrome.exe&amp;css=1&amp;js=1&amp;gcss=1&amp;rel=1&amp;rji=1&amp;sbe=0"></script>
+<script type="text/javascript" nonce="bc035baa08054c1cbc41ff71102" src="//local.adguard.org?ts=1767391800491&amp;name=AdGuard%20Extra&amp;type=user-script"></script><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#13ecc8",
+              "background-light": "#f6f8f8",
+              "background-dark": "#10221f",
+              "surface-dark": "#1a2e2b",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111817] dark:text-gray-100 min-h-screen flex flex-col items-center justify-center p-0 sm:p-4">
+<!-- Mobile Container (Simulated App Shell) -->
+<main class="w-full max-w-md bg-white dark:bg-surface-dark min-h-screen sm:min-h-0 sm:h-auto sm:rounded-xl shadow-none sm:shadow-lg overflow-hidden border-0 sm:border border-gray-100 dark:border-[#2a3e3b] flex flex-col">
+<!-- Header -->
+<header class="flex items-center justify-between border-b border-[#f0f4f4] dark:border-[#2a3e3b] px-6 py-4 bg-white dark:bg-surface-dark sticky top-0 z-10">
+<div class="flex items-center gap-3">
+<div class="size-8 text-primary">
+<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_319)">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+</g>
+<defs>
+<clippath id="clip0_6_319"><rect fill="white" height="48" width="48"></rect></clippath>
+</defs>
+</svg>
+</div>
+<h1 class="text-lg font-bold tracking-tight text-[#111817] dark:text-white">Liberia Connect</h1>
+</div>
+<button class="text-[#618983] dark:text-[#8baea9] hover:text-[#111817] dark:hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">help</span>
+</button>
+</header>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto">
+<!-- Hero / Heading -->
+<div class="px-6 py-6 pb-2">
+<h2 class="text-3xl font-bold tracking-tight text-[#111817] dark:text-white mb-2">Join for free</h2>
+<p class="text-[#618983] dark:text-[#a0c4be] text-sm leading-normal">
+                    Find tasks, services, and local offers instantly. Optimized for Mobile Money.
+                </p>
+</div>
+<!-- Registration Form -->
+<div class="px-6 py-4 flex flex-col gap-6">
+<!-- Step 1: Phone Number -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-[#111817] dark:text-gray-200" for="phone">
+                        Step 1: Mobile Number
+                    </label>
+<div class="relative flex items-center">
+<div class="absolute left-0 top-0 bottom-0 flex items-center justify-center pl-4 pr-3 border-r border-[#dbe6e4] dark:border-[#2a3e3b] bg-[#f9fafb] dark:bg-[#152522] rounded-l-lg h-14">
+<span class="material-symbols-outlined text-[#618983] text-xl mr-1">flag</span>
+<span class="text-[#111817] dark:text-white font-medium">+231</span>
+</div>
+<input class="form-input flex-1 h-14 pl-[110px] pr-4 rounded-lg border border-[#dbe6e4] dark:border-[#2a3e3b] bg-white dark:bg-[#1a2e2b] text-[#111817] dark:text-white placeholder:text-[#618983] dark:placeholder:text-[#507a73] focus:ring-2 focus:ring-primary focus:border-primary text-lg font-medium tracking-wide transition-all" id="phone" placeholder="088 612 3456" type="tel"/>
+<div class="absolute right-4 top-0 bottom-0 flex items-center">
+<span class="material-symbols-outlined text-green-500 hidden">check_circle</span>
+</div>
+</div>
+<button class="mt-2 w-full bg-primary hover:bg-[#0fd6b5] text-[#10221f] font-bold text-base h-12 rounded-lg transition-colors flex items-center justify-center gap-2 group">
+                        Send SMS Code
+                        <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">send</span>
+</button>
+<p class="text-xs text-[#618983] dark:text-[#6e918c] px-1">
+                        We'll send a 4-digit code to verify your number. Standard SMS rates may apply.
+                    </p>
+</div>
+<div class="relative flex py-2 items-center">
+<div class="flex-grow border-t border-[#f0f4f4] dark:border-[#2a3e3b]"></div>
+<span class="flex-shrink-0 mx-4 text-gray-400 dark:text-gray-600 text-xs uppercase font-medium">Verification</span>
+<div class="flex-grow border-t border-[#f0f4f4] dark:border-[#2a3e3b]"></div>
+</div>
+<!-- Step 2: OTP Entry -->
+<div class="flex flex-col gap-3 opacity-100">
+<!-- Note: In a real app, this might be hidden or disabled initially. Shown here for design requirement. -->
+<div class="flex justify-between items-end">
+<label class="text-sm font-semibold text-[#111817] dark:text-gray-200" for="otp">
+                            Step 2: Enter OTP
+                        </label>
+<button class="text-xs text-primary font-medium hover:underline">Resend Code?</button>
+</div>
+<div class="relative">
+<span class="absolute left-4 top-0 bottom-0 flex items-center text-[#618983]">
+<span class="material-symbols-outlined">lock</span>
+</span>
+<input class="form-input w-full h-14 pl-12 pr-4 rounded-lg border border-[#dbe6e4] dark:border-[#2a3e3b] bg-white dark:bg-[#1a2e2b] text-[#111817] dark:text-white placeholder:text-[#618983] dark:placeholder:text-[#507a73] focus:ring-2 focus:ring-primary focus:border-primary text-lg font-medium tracking-[0.25em]" id="otp" maxlength="6" placeholder="- - - -" type="text"/>
+</div>
+<button class="w-full bg-[#111817] dark:bg-white hover:bg-black dark:hover:bg-gray-100 text-white dark:text-[#111817] font-bold text-base h-14 rounded-lg transition-colors shadow-md mt-1">
+                        Verify &amp; Complete
+                    </button>
+</div>
+</div>
+<!-- Footer Area -->
+<div class="p-6 pt-2 text-center">
+<p class="text-sm text-[#618983] dark:text-[#8baea9]">
+                    Already have an account? 
+                    <a class="font-bold text-[#111817] dark:text-primary hover:underline" href="#">Log In</a>
+</p>
+</div>
+<!-- Security/Trust Badge -->
+<div class="bg-[#f9fafb] dark:bg-[#152522] py-4 px-6 border-t border-[#f0f4f4] dark:border-[#2a3e3b] flex items-center justify-center gap-2 text-xs text-[#618983] dark:text-[#507a73]">
+<span class="material-symbols-outlined text-base">verified_user</span>
+<span>Secure Mobile Money Registration</span>
+</div>
+</div>
+</main>
+</body></html>

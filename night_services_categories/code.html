@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Night Services Categories</title>
+<!-- Tailwind CSS -->
+<script type="text/javascript" nonce="bc035baa08054c1cbc41ff71102" src="//local.adguard.org?ts=1767391800491&amp;type=content-script&amp;dmn=contribution.usercontent.google.com&amp;app=chrome.exe&amp;css=1&amp;js=1&amp;gcss=1&amp;rel=1&amp;rji=1&amp;sbe=0"></script>
+<script type="text/javascript" nonce="bc035baa08054c1cbc41ff71102" src="//local.adguard.org?ts=1767391800491&amp;name=AdGuard%20Extra&amp;type=user-script"></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec13ec",
+                        "background-light": "#f8f6f8",
+                        "background-dark": "#221022",
+                        "surface-dark": "#392839", // Extracted from snippets for component consistency
+                        "text-secondary-dark": "#b99db9", // Extracted from search placeholder
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex justify-center items-start text-gray-900 dark:text-white transition-colors duration-200">
+<!-- Mobile-First Layout Container -->
+<div class="w-full max-w-[480px] min-h-screen bg-background-light dark:bg-background-dark shadow-2xl relative flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between px-5 py-4 border-b border-gray-200 dark:border-[#392839] sticky top-0 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md z-30">
+<div class="flex items-center gap-3">
+<!-- Back Arrow -->
+<button class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 dark:bg-[#392839] text-gray-900 dark:text-white hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white transition-all duration-200">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold leading-tight tracking-tight">Night Life</h1>
+</div>
+<div class="flex gap-2">
+<!-- Profile/User Icon -->
+<button class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 dark:bg-[#392839] text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-[#4a354a] transition-all">
+<span class="material-symbols-outlined text-[20px]">person</span>
+</button>
+</div>
+</header>
+<!-- Search Bar -->
+<div class="px-5 pt-6 pb-2">
+<label class="flex flex-col h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full shadow-sm">
+<div class="flex items-center justify-center pl-4 bg-white dark:bg-[#392839] rounded-l-xl text-gray-400 dark:text-[#b99db9]">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="flex w-full flex-1 bg-white dark:bg-[#392839] text-gray-900 dark:text-white rounded-r-xl border-none focus:ring-2 focus:ring-primary focus:outline-none px-3 placeholder-gray-400 dark:placeholder-[#b99db9] text-base font-normal h-full transition-shadow" placeholder="Search (e.g., Massage, VIP Host)"/>
+</div>
+</label>
+</div>
+<!-- Headline & Description -->
+<div class="px-5 pt-4 pb-2">
+<h2 class="text-[28px] font-bold leading-tight tracking-tight mb-2">Select Service</h2>
+<p class="text-base font-normal text-gray-600 dark:text-gray-300 leading-normal">
+                Find trusted providers for your evening plans.
+            </p>
+</div>
+<!-- Filter Chips (Horizontal Scroll) -->
+<div class="w-full overflow-x-auto no-scrollbar pb-2 pt-2">
+<div class="flex gap-3 px-5">
+<!-- Active Chip -->
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary pl-3 pr-4 shadow-lg shadow-primary/20 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-white text-[20px]">near_me</span>
+<p class="text-white text-sm font-bold">Near Me</p>
+</button>
+<!-- Inactive Chip 1 -->
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-[#392839] border border-gray-100 dark:border-transparent pl-3 pr-4 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-gray-900 dark:text-white text-[20px]">schedule</span>
+<p class="text-gray-900 dark:text-white text-sm font-medium">Available Now</p>
+</button>
+<!-- Inactive Chip 2 -->
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-[#392839] border border-gray-100 dark:border-transparent pl-3 pr-4 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-gray-900 dark:text-white text-[20px]">credit_card</span>
+<p class="text-gray-900 dark:text-white text-sm font-medium">Mobile Money</p>
+</button>
+<!-- Inactive Chip 3 -->
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-[#392839] border border-gray-100 dark:border-transparent pl-3 pr-4 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-gray-900 dark:text-white text-[20px]">verified_user</span>
+<p class="text-gray-900 dark:text-white text-sm font-medium">Verified</p>
+</button>
+</div>
+</div>
+<!-- Categories List -->
+<main class="flex-1 px-5 py-4 flex flex-col gap-4 pb-28">
+<!-- Category Card: Massage & Wellness -->
+<div class="group relative flex items-center p-4 bg-white dark:bg-[#392839] rounded-2xl shadow-sm border border-transparent hover:border-primary/30 dark:hover:border-primary/50 cursor-pointer transition-all duration-300 active:scale-[0.98]">
+<!-- Icon Container -->
+<div class="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[28px]">spa</span>
+</div>
+<!-- Text Content -->
+<div class="ml-4 flex-1 min-w-0">
+<div class="flex justify-between items-center mb-0.5">
+<h3 class="text-base font-bold text-gray-900 dark:text-white truncate">Massage &amp; Wellness</h3>
+</div>
+<p class="text-xs text-gray-500 dark:text-[#b99db9] truncate">Therapeutic and relaxation services</p>
+</div>
+<!-- Chevron -->
+<span class="material-symbols-outlined text-gray-300 dark:text-gray-600">chevron_right</span>
+</div>
+<!-- Category Card: Social Company -->
+<div class="group relative flex items-center p-4 bg-white dark:bg-[#392839] rounded-2xl shadow-sm border border-transparent hover:border-primary/30 dark:hover:border-primary/50 cursor-pointer transition-all duration-300 active:scale-[0.98]">
+<div class="h-14 w-14 rounded-full bg-indigo-500/10 dark:bg-indigo-500/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-indigo-600 dark:text-indigo-400 text-[28px]">diversity_3</span>
+</div>
+<div class="ml-4 flex-1 min-w-0">
+<h3 class="text-base font-bold text-gray-900 dark:text-white truncate">Companionship</h3>
+<p class="text-xs text-gray-500 dark:text-[#b99db9] truncate">Dinner dates and event partners</p>
+</div>
+<span class="material-symbols-outlined text-gray-300 dark:text-gray-600">chevron_right</span>
+</div>
+<!-- Category Card: VIP Party Host -->
+<div class="group relative flex items-center p-4 bg-white dark:bg-[#392839] rounded-2xl shadow-sm border border-transparent hover:border-primary/30 dark:hover:border-primary/50 cursor-pointer transition-all duration-300 active:scale-[0.98]">
+<div class="h-14 w-14 rounded-full bg-amber-500/10 dark:bg-amber-500/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-amber-600 dark:text-amber-400 text-[28px]">local_bar</span>
+</div>
+<div class="ml-4 flex-1 min-w-0">
+<div class="flex items-center gap-2">
+<h3 class="text-base font-bold text-gray-900 dark:text-white truncate">VIP Party Host</h3>
+<span class="px-1.5 py-0.5 rounded bg-primary text-[9px] font-bold text-white uppercase tracking-wider">Hot</span>
+</div>
+<p class="text-xs text-gray-500 dark:text-[#b99db9] truncate">Table booking &amp; club access</p>
+</div>
+<span class="material-symbols-outlined text-gray-300 dark:text-gray-600">chevron_right</span>
+</div>
+<!-- Category Card: Driver / Escort -->
+<div class="group relative flex items-center p-4 bg-white dark:bg-[#392839] rounded-2xl shadow-sm border border-transparent hover:border-primary/30 dark:hover:border-primary/50 cursor-pointer transition-all duration-300 active:scale-[0.98]">
+<div class="h-14 w-14 rounded-full bg-emerald-500/10 dark:bg-emerald-500/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-emerald-600 dark:text-emerald-400 text-[28px]">local_taxi</span>
+</div>
+<div class="ml-4 flex-1 min-w-0">
+<h3 class="text-base font-bold text-gray-900 dark:text-white truncate">Secure Transport</h3>
+<p class="text-xs text-gray-500 dark:text-[#b99db9] truncate">Safe rides for night outs</p>
+</div>
+<span class="material-symbols-outlined text-gray-300 dark:text-gray-600">chevron_right</span>
+</div>
+<!-- 18+ Disclaimer -->
+<div class="mt-4 p-3 rounded-lg border border-red-500/20 bg-red-500/5 flex gap-3 items-start">
+<span class="material-symbols-outlined text-red-400 text-[20px] mt-0.5">18_up_rating</span>
+<p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                    Adult services require verified ID. Providers are independent contractors. Safety guidelines apply.
+                </p>
+</div>
+</main>
+<!-- Bottom Navigation Dock -->
+<nav class="absolute bottom-0 w-full bg-white/95 dark:bg-[#181118]/95 backdrop-blur-lg border-t border-gray-200 dark:border-[#392839] px-6 py-2 flex justify-between items-center z-40 pb-6 pt-3">
+<button class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-500 hover:text-primary dark:hover:text-primary transition-colors group">
+<span class="material-symbols-outlined group-hover:-translate-y-0.5 transition-transform">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary relative">
+<div class="absolute -top-10 bg-primary/20 p-2 rounded-full backdrop-blur-sm">
+<div class="bg-primary p-3 rounded-full shadow-lg shadow-primary/40 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[24px]">search</span>
+</div>
+</div>
+<div class="h-6"></div> <!-- Spacer for floating button -->
+<span class="text-[10px] font-bold mt-1">Explore</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-500 hover:text-primary dark:hover:text-primary transition-colors group">
+<span class="material-symbols-outlined group-hover:-translate-y-0.5 transition-transform">receipt_long</span>
+<span class="text-[10px] font-medium">Orders</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-500 hover:text-primary dark:hover:text-primary transition-colors group">
+<span class="material-symbols-outlined group-hover:-translate-y-0.5 transition-transform">account_balance_wallet</span>
+<span class="text-[10px] font-medium">Wallet</span>
+</button>
+</nav>
+</div>
+</body></html>

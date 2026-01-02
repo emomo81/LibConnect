@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Domestic Service Providers</title>
+<script type="text/javascript" nonce="bc035baa08054c1cbc41ff71102" src="//local.adguard.org?ts=1767391800491&amp;type=content-script&amp;dmn=contribution.usercontent.google.com&amp;app=chrome.exe&amp;css=1&amp;js=1&amp;gcss=1&amp;rel=1&amp;rji=1&amp;sbe=0"></script>
+<script type="text/javascript" nonce="bc035baa08054c1cbc41ff71102" src="//local.adguard.org?ts=1767391800491&amp;name=AdGuard%20Extra&amp;type=user-script"></script><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ecc8",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#10221f",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111817] dark:text-white overflow-x-hidden min-h-screen flex flex-col">
+<!-- Top Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#dbe6e4] dark:border-[#2a3e3b] bg-white dark:bg-[#192b28] px-6 py-4 sticky top-0 z-50">
+<div class="flex items-center gap-4 text-[#111817] dark:text-white">
+<div class="size-8 flex items-center justify-center rounded-lg bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-2xl">cleaning_services</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">LiberiaServices</h2>
+</div>
+<button class="flex items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-[#f0f4f4] dark:bg-[#233532] text-[#111817] dark:text-white hover:bg-[#e0e6e6] dark:hover:bg-[#2f4541] transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<main class="flex-1 flex flex-col items-center w-full px-4 sm:px-6 md:px-8 py-6">
+<div class="w-full max-w-[960px] flex flex-col gap-6">
+<!-- Page Heading & Data Saver -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div class="flex flex-col gap-2">
+<h1 class="text-3xl md:text-4xl font-bold leading-tight tracking-tight">Find Domestic Help</h1>
+<p class="text-[#618983] dark:text-[#8ba39f] text-sm md:text-base font-normal">Browse verified providers in your area</p>
+</div>
+<!-- Data Saver Toggle -->
+<div class="flex items-center gap-3 bg-white dark:bg-[#192b28] border border-[#dbe6e4] dark:border-[#2a3e3b] px-4 py-2 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-[#618983]">wifi_off</span>
+<div class="flex flex-col">
+<span class="text-xs font-bold uppercase tracking-wider text-[#618983]">Data Saver</span>
+</div>
+<label class="relative flex h-[24px] w-[44px] cursor-pointer items-center rounded-full border-none bg-[#f0f4f4] dark:bg-[#2f4541] p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary transition-colors">
+<div class="h-[20px] w-[20px] rounded-full bg-white shadow-sm"></div>
+<input class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+<!-- Filters Section -->
+<div class="bg-white dark:bg-[#192b28] rounded-xl border border-[#dbe6e4] dark:border-[#2a3e3b] p-4 shadow-sm flex flex-col gap-4">
+<!-- Location Select -->
+<div class="w-full">
+<label class="block text-xs font-bold uppercase tracking-wider text-[#618983] dark:text-[#8ba39f] mb-2">Select Zone / Community</label>
+<div class="relative">
+<select class="w-full appearance-none rounded-lg border border-[#dbe6e4] dark:border-[#2a3e3b] bg-background-light dark:bg-[#10221f] text-base py-3 pl-4 pr-10 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+<option disabled="" selected="" value="">Choose a location (e.g. Sinkor)</option>
+<option value="sinkor">Sinkor</option>
+<option value="congo_town">Congo Town</option>
+<option value="paynesville">Paynesville</option>
+<option value="west_point">West Point</option>
+<option value="bushrod">Bushrod Island</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-[#618983]">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Service Chips -->
+<div class="flex flex-wrap gap-2">
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#111817] text-white dark:bg-primary dark:text-[#111817] text-sm font-bold transition-colors">
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+                        All Services
+                    </button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#f0f4f4] dark:bg-[#233532] hover:bg-[#e0e6e6] dark:hover:bg-[#2f4541] text-[#111817] dark:text-white text-sm font-medium transition-colors">
+<span class="material-symbols-outlined text-[18px]">cleaning_services</span>
+                        Cleaning
+                    </button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#f0f4f4] dark:bg-[#233532] hover:bg-[#e0e6e6] dark:hover:bg-[#2f4541] text-[#111817] dark:text-white text-sm font-medium transition-colors">
+<span class="material-symbols-outlined text-[18px]">skillet</span>
+                        Cooking
+                    </button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#f0f4f4] dark:bg-[#233532] hover:bg-[#e0e6e6] dark:hover:bg-[#2f4541] text-[#111817] dark:text-white text-sm font-medium transition-colors">
+<span class="material-symbols-outlined text-[18px]">local_laundry_service</span>
+                        Laundry
+                    </button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#f0f4f4] dark:bg-[#233532] hover:bg-[#e0e6e6] dark:hover:bg-[#2f4541] text-[#111817] dark:text-white text-sm font-medium transition-colors">
+<span class="material-symbols-outlined text-[18px]">child_care</span>
+                        Nanny
+                    </button>
+</div>
+</div>
+<!-- Provider Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+<!-- Card 1 -->
+<div class="flex flex-col rounded-lg border border-[#dbe6e4] dark:border-[#2a3e3b] bg-white dark:bg-[#192b28] overflow-hidden group shadow-sm hover:shadow-md transition-shadow">
+<div class="h-48 w-full bg-gray-200 dark:bg-[#10221f] relative overflow-hidden">
+<img class="h-full w-full object-cover transition-transform group-hover:scale-105" data-alt="Portrait of a young woman smiling in a casual setting" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuWrXP-cFCuUi5jkToO04jk85O8SUv-YZwae9vYO_GDHItCbthh1oH4XtuQ1hSEeze3_DSoEseM1c-4gQZ6O9YtBvpRFSjDn2-rQQ6m91s-VhvrA4bTkVGtK5qvm5R8HdY3mWYohOZFEtGmFjhYQTBvTaMaXhBFnlDiKRYTAlx-04_Zb8X1Gw5yg0a8etzOpPjlYBhxWGMIk6ahNxb3AeeeKyeAXfVvlr9LKZjG_uCef6i2k61dkDj7ZFOn6kdPS0urZAVV4mVWrUc"/>
+<div class="absolute top-2 right-2 bg-primary text-[#111817] text-xs font-bold px-2 py-1 rounded flex items-center gap-1 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+                            Available
+                        </div>
+</div>
+<div class="p-4 flex flex-col gap-3 flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-bold text-lg text-[#111817] dark:text-white">Mary, 24</h3>
+<div class="flex items-center gap-1 text-[#618983] dark:text-[#8ba39f] text-sm mt-0.5">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                                    Sinkor, 12th St.
+                                </div>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 text-xs font-medium text-[#111817] dark:text-[#d1d5d5]">
+<span class="bg-[#f0f4f4] dark:bg-[#233532] px-2 py-1 rounded">Cleaning</span>
+<span class="bg-[#f0f4f4] dark:bg-[#233532] px-2 py-1 rounded">Cooking</span>
+</div>
+<div class="mt-auto pt-3">
+<button class="w-full bg-primary hover:bg-[#11d8b6] text-[#111817] font-bold py-2.5 px-4 rounded-lg text-sm transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">lock_open</span>
+                                Unlock Contact
+                            </button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex flex-col rounded-lg border border-[#dbe6e4] dark:border-[#2a3e3b] bg-white dark:bg-[#192b28] overflow-hidden group shadow-sm hover:shadow-md transition-shadow">
+<div class="h-48 w-full bg-gray-200 dark:bg-[#10221f] relative overflow-hidden">
+<img class="h-full w-full object-cover transition-transform group-hover:scale-105" data-alt="Portrait of a man smiling brightly outdoors" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-GOQUDRbWFqItZk59tz69Gz4DM2451PFKshyU9gSjpGM9MfPNF3HkGJLsE9huiYD-P1bCD1MDkURZDMaSknWr-P0eFQCXeHjtEWmDbXiKZzlRYmriIU8ee1TVmpLh_XY9Tdvo3BW9fVzUBzRtxlOGZ-Q9YgJy9BG9oRvdjzeAq4PyL3JUnDw7v6N_mD55Rxf27guCy98TdcQFXbkcehxCLWkeQfnnvb7CQDR8wvChjxYw5aULVct2Ypdr9JTTNAaJvNnoPml49uod"/>
+<div class="absolute top-2 right-2 bg-primary text-[#111817] text-xs font-bold px-2 py-1 rounded flex items-center gap-1 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+                            Available
+                        </div>
+</div>
+<div class="p-4 flex flex-col gap-3 flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-bold text-lg text-[#111817] dark:text-white">John, 29</h3>
+<div class="flex items-center gap-1 text-[#618983] dark:text-[#8ba39f] text-sm mt-0.5">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                                    Paynesville, ELWA
+                                </div>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 text-xs font-medium text-[#111817] dark:text-[#d1d5d5]">
+<span class="bg-[#f0f4f4] dark:bg-[#233532] px-2 py-1 rounded">Heavy Lifting</span>
+<span class="bg-[#f0f4f4] dark:bg-[#233532] px-2 py-1 rounded">Gardening</span>
+</div>
+<div class="mt-auto pt-3">
+<button class="w-full bg-primary hover:bg-[#11d8b6] text-[#111817] font-bold py-2.5 px-4 rounded-lg text-sm transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">lock_open</span>
+                                Unlock Contact
+                            </button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex flex-col rounded-lg border border-[#dbe6e4] dark:border-[#2a3e3b] bg-white dark:bg-[#192b28] overflow-hidden group shadow-sm hover:shadow-md transition-shadow">
+<div class="h-48 w-full bg-gray-200 dark:bg-[#10221f] relative overflow-hidden">
+<img class="h-full w-full object-cover transition-transform group-hover:scale-105" data-alt="Portrait of a woman with a serious but kind expression" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC03fvhve8EeVPVIW_hRVT8VMsPRSRpdozMZkWV4Z2JHWLMK4UjbbMd7SvnqmUm5l3beSJ5SdZBZnXZqacLhhGAU0pYVY_5eKMy3Zo5uHdY2rmUu9dQJO108lSmToVIYOdsDpfdQhoHKY5RopyGxQLRuPoVv1HLFApt1x-q2AAyPuY5tEAMV9TLHLm60oJzXOmOwa5RoSpjPIzloAfUE0LOKyYjogxTE0rdlP8mNWf_7OmuO-jL6hrGkTLuxH-libu-AGxaih3GQoRd"/>
+<div class="absolute top-2 right-2 bg-white/90 text-[#111817] text-xs font-bold px-2 py-1 rounded flex items-center gap-1 shadow-sm border border-gray-200">
+                            Busy
+                        </div>
+</div>
+<div class="p-4 flex flex-col gap-3 flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-bold text-lg text-[#111817] dark:text-white">Sarah, 31</h3>
+<div class="flex items-center gap-1 text-[#618983] dark:text-[#8ba39f] text-sm mt-0.5">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                                    West Point
+                                </div>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 text-xs font-medium text-[#111817] dark:text-[#d1d5d5]">
+<span class="bg-[#f0f4f4] dark:bg-[#233532] px-2 py-1 rounded">Cooking</span>
+<span class="bg-[#f0f4f4] dark:bg-[#233532] px-2 py-1 rounded">Nanny</span>
+</div>
+<div class="mt-auto pt-3">
+<button class="w-full bg-[#e0e6e6] dark:bg-[#2f4541] text-[#618983] dark:text-[#8ba39f] cursor-not-allowed font-bold py-2.5 px-4 rounded-lg text-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+                                Unavailable
+                            </button>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="flex flex-col rounded-lg border border-[#dbe6e4] dark:border-[#2a3e3b] bg-white dark:bg-[#192b28] overflow-hidden group shadow-sm hover:shadow-md transition-shadow">
+<div class="h-48 w-full bg-gray-200 dark:bg-[#10221f] relative overflow-hidden">
+<img class="h-full w-full object-cover transition-transform group-hover:scale-105" data-alt="Portrait of a young woman looking confident" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsv0TaW7ox0EzYtzKma8BcSDv_v37HVjca5j9QzSaaSKGkqCFEttLtsyShF52po33KkKeNh6E6I9QmY8vKYLgoFKmyPGsxTRvx7aI65AqNxzJQ-fFNepqqGueN5Whf84IPMx6TwgAK2EZTpBVZMZ5bk9mhECtVRhLD-86YPd-__qgNQZ7cSH4-Uz3Utk6ccr22kib_nEdvjvT1pJZTrxxsRjBECVI6XJy4UN4OMBX-nTQVZXyequKKIjccXBPb1NwOCttYmZUOINdq"/>
+<div class="absolute top-2 right-2 bg-primary text-[#111817] text-xs font-bold px-2 py-1 rounded flex items-center gap-1 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+                            Available
+                        </div>
+</div>
+<div class="p-4 flex flex-col gap-3 flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-bold text-lg text-[#111817] dark:text-white">Fatima, 26</h3>
+<div class="flex items-center gap-1 text-[#618983] dark:text-[#8ba39f] text-sm mt-0.5">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                                    Congo Town
+                                </div>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 text-xs font-medium text-[#111817] dark:text-[#d1d5d5]">
+<span class="bg-[#f0f4f4] dark:bg-[#233532] px-2 py-1 rounded">Deep Clean</span>
+<span class="bg-[#f0f4f4] dark:bg-[#233532] px-2 py-1 rounded">Laundry</span>
+</div>
+<div class="mt-auto pt-3">
+<button class="w-full bg-primary hover:bg-[#11d8b6] text-[#111817] font-bold py-2.5 px-4 rounded-lg text-sm transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">lock_open</span>
+                                Unlock Contact
+                            </button>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="flex flex-col rounded-lg border border-[#dbe6e4] dark:border-[#2a3e3b] bg-white dark:bg-[#192b28] overflow-hidden group shadow-sm hover:shadow-md transition-shadow">
+<div class="h-48 w-full bg-gray-200 dark:bg-[#10221f] relative overflow-hidden">
+<img class="h-full w-full object-cover transition-transform group-hover:scale-105" data-alt="Portrait of a man with a friendly smile" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCV0m2Kpde0j3APv1j4aYWFMGflg7k5dGybzTW41v5uhoWoKkTr9vklcZ7MQLbvMLWgBQHQCuhr2Qm_NHiLNSjAf1XLgLulHiqOUPFv70wJqGvzYV-KiMBiKx0ZHG2gZeyaLf2_RmAIBQhGQRScelYBxgZlO_PwReT_lEZXYom4qu3MKH_8ZhSE_QepTsQk5Dk5NzHy2Ek1X08KpRRtZNHozjzyrMeCLrHcU2z-ZlsbLybYVXMka2JrW0vw3c0wJoLbxy9L5tpxL-ha"/>
+<div class="absolute top-2 right-2 bg-primary text-[#111817] text-xs font-bold px-2 py-1 rounded flex items-center gap-1 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+                            Available
+                        </div>
+</div>
+<div class="p-4 flex flex-col gap-3 flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-bold text-lg text-[#111817] dark:text-white">Emmanuel, 22</h3>
+<div class="flex items-center gap-1 text-[#618983] dark:text-[#8ba39f] text-sm mt-0.5">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                                    Sinkor, 20th St.
+                                </div>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 text-xs font-medium text-[#111817] dark:text-[#d1d5d5]">
+<span class="bg-[#f0f4f4] dark:bg-[#233532] px-2 py-1 rounded">Yard Work</span>
+<span class="bg-[#f0f4f4] dark:bg-[#233532] px-2 py-1 rounded">Car Wash</span>
+</div>
+<div class="mt-auto pt-3">
+<button class="w-full bg-primary hover:bg-[#11d8b6] text-[#111817] font-bold py-2.5 px-4 rounded-lg text-sm transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">lock_open</span>
+                                Unlock Contact
+                            </button>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="flex flex-col rounded-lg border border-[#dbe6e4] dark:border-[#2a3e3b] bg-white dark:bg-[#192b28] overflow-hidden group shadow-sm hover:shadow-md transition-shadow">
+<div class="h-48 w-full bg-gray-200 dark:bg-[#10221f] relative overflow-hidden">
+<img class="h-full w-full object-cover transition-transform group-hover:scale-105" data-alt="Portrait of a woman wearing a headscarf" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFzgyOxr9SADaIKF4lqmY1IO_fKeTpW-8eH08nVk7R7FhVCUTmmQNYcRqLTBJFGOeasMClv6D78kLi29D7OlRyIfrdoj_rV51J35v--21wpq2me_96VMcEspIQaIBQsXVlpnVmxv1BzqkyEbxyrnC7CIQmeBonVtwI0a1hIIFs-tkPXVRxFWm_yOj5HWOdJhZ2f1Rgj1xIUBN2NZkJ0sivCLgXf59FIvUzPZsve2GHl_UbINCbNRZg6qNTGozCjEsCxo_5LvzOXdDT"/>
+<div class="absolute top-2 right-2 bg-primary text-[#111817] text-xs font-bold px-2 py-1 rounded flex items-center gap-1 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+                            Available
+                        </div>
+</div>
+<div class="p-4 flex flex-col gap-3 flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-bold text-lg text-[#111817] dark:text-white">Mercy, 35</h3>
+<div class="flex items-center gap-1 text-[#618983] dark:text-[#8ba39f] text-sm mt-0.5">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                                    Old Road
+                                </div>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 text-xs font-medium text-[#111817] dark:text-[#d1d5d5]">
+<span class="bg-[#f0f4f4] dark:bg-[#233532] px-2 py-1 rounded">Elderly Care</span>
+<span class="bg-[#f0f4f4] dark:bg-[#233532] px-2 py-1 rounded">Cooking</span>
+</div>
+<div class="mt-auto pt-3">
+<button class="w-full bg-primary hover:bg-[#11d8b6] text-[#111817] font-bold py-2.5 px-4 rounded-lg text-sm transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">lock_open</span>
+                                Unlock Contact
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex flex-col items-center gap-4 py-6">
+<button class="w-full max-w-[320px] bg-white dark:bg-[#233532] border border-[#dbe6e4] dark:border-[#2a3e3b] text-[#111817] dark:text-white font-bold h-12 rounded-lg hover:bg-[#f0f4f4] dark:hover:bg-[#2f4541] transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">refresh</span>
+                    Load More Providers
+                </button>
+<p class="text-xs text-[#618983] dark:text-[#8ba39f]">Showing 6 of 42 providers in your area</p>
+</div>
+<!-- Footer / Disclaimer -->
+<div class="w-full border-t border-[#dbe6e4] dark:border-[#2a3e3b] pt-6 pb-8 flex flex-col items-center gap-3">
+<div class="flex items-center gap-2 opacity-70">
+<div class="h-6 w-10 rounded bg-yellow-400 flex items-center justify-center text-[8px] font-bold text-black">MTN</div>
+<div class="h-6 w-10 rounded bg-orange-500 flex items-center justify-center text-[8px] font-bold text-white">Orange</div>
+</div>
+<p class="text-xs text-[#618983] dark:text-[#8ba39f] text-center max-w-sm">
+                    Payments and provider verification secured by Mobile Money. 
+                    <br/>Standard SMS rates may apply.
+                </p>
+</div>
+</div>
+</main>
+</body></html>

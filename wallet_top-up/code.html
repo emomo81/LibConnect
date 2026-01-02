@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Liberia Connect - Wallet Top-Up</title>
+<script type="text/javascript" nonce="bc035baa08054c1cbc41ff71102" src="//local.adguard.org?ts=1767391800491&amp;type=content-script&amp;dmn=contribution.usercontent.google.com&amp;app=chrome.exe&amp;css=1&amp;js=1&amp;gcss=1&amp;rel=1&amp;rji=1&amp;sbe=0"></script>
+<script type="text/javascript" nonce="bc035baa08054c1cbc41ff71102" src="//local.adguard.org?ts=1767391800491&amp;name=AdGuard%20Extra&amp;type=user-script"></script><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ecc8",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#10221f",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111817] dark:text-white overflow-x-hidden min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#f0f4f4] dark:border-[#1e3a36] px-4 md:px-10 py-3 bg-white dark:bg-[#10221f]">
+<div class="flex items-center gap-4">
+<div class="size-8 text-primary">
+<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_319)">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+</g>
+<defs>
+<clippath id="clip0_6_319"><rect fill="white" height="48" width="48"></rect></clippath>
+</defs>
+</svg>
+</div>
+<h2 class="text-[#111817] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Liberia Connect</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-[#111817] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-[#111817] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Tasks</a>
+<a class="text-[#111817] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Nightlife</a>
+<a class="text-primary text-sm font-bold leading-normal" href="#">Wallet</a>
+<a class="text-[#111817] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Profile</a>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[#f0f4f4] dark:border-[#1e3a36]" data-alt="Profile picture of a user" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDaVe2Ss4gsm95OoQfNy4MCGH1UV6ZihxzXhFLB1HNk3MmyFE9wf54mCz3_xL8HzkaUG5cbHGwZezr5vLaBBl6WYpPwrQeMhCuD_Mb2CFEoqEKfV1Yj0YErkY-5wQM1xrAvgcfKfgFqPgjFpSejsy07AstGWkbpVZCJ051BupwGdwNNyzoJKixGykKjwKXgBSl5L4Uj2lttKCRhCCpj7uTadmxTLrAZ48RSECvxYJFu3vc1rhWPY7IggYgNLIo73mNVHLM1g3PAT9TU");'></div>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center py-8 px-4 md:px-10 lg:px-40">
+<div class="max-w-[1024px] w-full flex flex-col gap-6">
+<!-- Page Heading -->
+<div class="flex flex-col gap-2">
+<h1 class="text-3xl md:text-4xl font-bold text-[#111817] dark:text-white tracking-tight">Top Up Your Wallet</h1>
+<p class="text-[#618983] dark:text-[#a0c4be] text-base font-normal max-w-2xl">Securely add funds to your account using local mobile money services. Follow the instructions on the left, then confirm your transaction on the right.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mt-4">
+<!-- Left Column: Instructions -->
+<div class="flex flex-col gap-6">
+<!-- Provider Tabs -->
+<div class="border-b border-[#dbe6e4] dark:border-[#2a4540]">
+<nav aria-label="Tabs" class="-mb-px flex gap-6">
+<a class="border-primary text-primary whitespace-nowrap border-b-[3px] py-4 px-1 text-sm font-bold flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[20px]">sim_card</span>
+                                MTN Mobile Money
+                            </a>
+<a class="border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 whitespace-nowrap border-b-[3px] py-4 px-1 text-sm font-medium flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[20px]">signal_cellular_alt</span>
+                                Orange Money
+                            </a>
+</nav>
+</div>
+<!-- Step 1 -->
+<div class="bg-white dark:bg-[#1a2e2b] p-5 rounded-xl border border-[#f0f4f4] dark:border-[#2a4540] shadow-sm">
+<div class="flex items-start gap-4">
+<div class="flex items-center justify-center rounded-lg bg-[#e0fbf7] dark:bg-[#153833] text-primary shrink-0 size-10">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-base font-bold text-[#111817] dark:text-white">Dial USSD Code</h3>
+<p class="text-sm text-[#618983] dark:text-[#a0c4be]">On your mobile device, dial the shortcode below to start the transfer.</p>
+<div class="mt-2 inline-flex items-center gap-2 bg-[#f6f8f8] dark:bg-[#10221f] px-3 py-1.5 rounded text-lg font-mono font-bold text-[#111817] dark:text-white w-fit">
+                                    *156#
+                                </div>
+</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="bg-white dark:bg-[#1a2e2b] p-5 rounded-xl border border-[#f0f4f4] dark:border-[#2a4540] shadow-sm">
+<div class="flex items-start gap-4">
+<div class="flex items-center justify-center rounded-lg bg-[#e0fbf7] dark:bg-[#153833] text-primary shrink-0 size-10">
+<span class="material-symbols-outlined">send_money</span>
+</div>
+<div class="flex flex-col gap-1 w-full">
+<h3 class="text-base font-bold text-[#111817] dark:text-white">Send Money</h3>
+<p class="text-sm text-[#618983] dark:text-[#a0c4be]">Select "Send Money" and enter the recipient details.</p>
+<div class="mt-3 flex flex-col gap-2">
+<div class="flex items-center justify-between p-3 rounded bg-[#f6f8f8] dark:bg-[#10221f]">
+<div>
+<p class="text-xs text-[#618983] dark:text-[#a0c4be] uppercase tracking-wider font-semibold">Recipient Number</p>
+<p class="text-lg font-bold text-[#111817] dark:text-white font-mono">0886-555-123</p>
+</div>
+<button class="text-primary hover:text-[#10cea8] p-2 rounded-full hover:bg-primary/10 transition-colors" title="Copy Number">
+<span class="material-symbols-outlined">content_copy</span>
+</button>
+</div>
+<p class="text-xs text-[#618983] dark:text-[#a0c4be] px-1">Name: <span class="font-medium text-[#111817] dark:text-white">Liberia Connect Inc.</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Verification Form -->
+<div class="flex flex-col gap-6">
+<div class="bg-white dark:bg-[#1a2e2b] p-6 md:p-8 rounded-2xl border border-[#e5ecec] dark:border-[#2a4540] shadow-lg sticky top-6">
+<div class="flex items-center gap-3 mb-6">
+<div class="size-8 rounded-full bg-primary flex items-center justify-center text-[#10221f]">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<h3 class="text-xl font-bold text-[#111817] dark:text-white">Verify Transaction</h3>
+</div>
+<form class="flex flex-col gap-5">
+<!-- Amount Field -->
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-[#111817] dark:text-gray-200" for="amount">Amount Sent</label>
+<div class="relative flex rounded-lg shadow-sm">
+<div class="relative flex-grow focus-within:z-10">
+<input class="block w-full rounded-none rounded-l-lg border-0 py-3.5 pl-4 text-[#111817] dark:text-white bg-[#f6f8f8] dark:bg-[#10221f] ring-1 ring-inset ring-gray-300 dark:ring-[#2a4540] placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" id="amount" name="amount" placeholder="0.00" type="number"/>
+</div>
+<div class="relative -ml-px">
+<select class="h-full rounded-r-lg border-0 bg-[#eef2f2] dark:bg-[#0d1c1a] py-0 pl-3 pr-9 text-gray-900 dark:text-white font-medium ring-1 ring-inset ring-gray-300 dark:ring-[#2a4540] focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm">
+<option>LRD</option>
+<option>USD</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Transaction ID Field -->
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-[#111817] dark:text-gray-200" for="transaction-id">Transaction ID</label>
+<div class="relative">
+<input class="block w-full rounded-lg border-0 py-3.5 pl-4 text-[#111817] dark:text-white bg-[#f6f8f8] dark:bg-[#10221f] ring-1 ring-inset ring-gray-300 dark:ring-[#2a4540] placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" id="transaction-id" name="transaction-id" placeholder="e.g. 123456789" type="text"/>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+<span class="material-symbols-outlined text-gray-400">receipt_long</span>
+</div>
+</div>
+<p class="text-xs text-[#618983] dark:text-[#7d9f9a]">Found in the SMS confirmation from your provider.</p>
+</div>
+<!-- Sender Phone Field -->
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-[#111817] dark:text-gray-200" for="sender-phone">Your Phone Number</label>
+<div class="relative">
+<input class="block w-full rounded-lg border-0 py-3.5 pl-4 text-[#111817] dark:text-white bg-[#f6f8f8] dark:bg-[#10221f] ring-1 ring-inset ring-gray-300 dark:ring-[#2a4540] placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" id="sender-phone" name="sender-phone" placeholder="0886..." type="tel"/>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+<span class="material-symbols-outlined text-gray-400">smartphone</span>
+</div>
+</div>
+</div>
+<!-- Submit Button -->
+<button class="mt-4 flex w-full items-center justify-center rounded-lg bg-primary px-8 py-3.5 text-sm font-bold text-[#10221f] hover:bg-[#10cea8] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all shadow-sm active:scale-[0.98]" type="button">
+                                Verify Transaction
+                            </button>
+<!-- Support Link -->
+<div class="mt-2 text-center">
+<a class="text-sm text-[#618983] dark:text-[#a0c4be] hover:text-primary transition-colors flex items-center justify-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-[16px]">help</span>
+                                    Having trouble? Contact Support
+                                </a>
+</div>
+</form>
+</div>
+<div class="flex items-start gap-3 p-4 bg-primary/10 rounded-lg border border-primary/20">
+<span class="material-symbols-outlined text-primary mt-0.5">info</span>
+<p class="text-sm text-[#111817] dark:text-white">
+<span class="font-bold">Note:</span> Verification usually takes 2-5 minutes. Please ensure your Transaction ID is correct to avoid delays.
+                         </p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>
