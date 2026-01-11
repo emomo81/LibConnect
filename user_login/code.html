@@ -56,19 +56,19 @@
 <form class="flex flex-col gap-5" onsubmit="event.preventDefault()">
 <!-- Phone Number Field -->
 <div class="flex flex-col gap-2">
-<label class="text-[#111618] dark:text-[#e0e0e0] text-sm font-semibold leading-normal" for="phone">Phone Number</label>
+<label class="text-[#111618] dark:text-[#e0e0e0] text-sm font-semibold leading-normal" for="phone">Phone Number<span class="text-red-500 ml-1">*</span></label>
 <div class="group flex items-center rounded-lg border border-[#dbe2e6] dark:border-[#3e4f59] bg-white dark:bg-[#101c22] focus-within:border-primary focus-within:ring-1 focus-within:ring-primary overflow-hidden h-12 sm:h-14 transition-colors">
 <div class="pl-4 pr-3 text-[#617c89] dark:text-[#93a2b7] font-medium border-r border-[#dbe2e6] dark:border-[#3e4f59] h-full flex items-center bg-[#f8fafb] dark:bg-[#18262e] select-none text-sm sm:text-base">
 <span class="mr-1">🇱🇷</span> +231
                                 </div>
-<input class="flex-1 border-none bg-transparent h-full px-4 text-base placeholder:text-[#93a2b7] focus:ring-0 text-[#111618] dark:text-white outline-none" id="phone" placeholder="77 123 456" type="tel"/>
+<input class="flex-1 border-none bg-transparent h-full px-4 text-base placeholder:text-[#93a2b7] focus:ring-0 text-[#111618] dark:text-white outline-none" id="phone" placeholder="77 123 456" type="tel" required/>
 </div>
 </div>
 <!-- Password Field -->
 <div class="flex flex-col gap-2">
-<label class="text-[#111618] dark:text-[#e0e0e0] text-sm font-semibold leading-normal" for="password">Password</label>
+<label class="text-[#111618] dark:text-[#e0e0e0] text-sm font-semibold leading-normal" for="password">Password<span class="text-red-500 ml-1">*</span></label>
 <div class="group flex items-center rounded-lg border border-[#dbe2e6] dark:border-[#3e4f59] bg-white dark:bg-[#101c22] focus-within:border-primary focus-within:ring-1 focus-within:ring-primary overflow-hidden h-12 sm:h-14 transition-colors">
-<input class="flex-1 border-none bg-transparent h-full px-4 text-base placeholder:text-[#93a2b7] focus:ring-0 text-[#111618] dark:text-white outline-none" id="password" placeholder="Enter your password" type="password"/>
+<input class="flex-1 border-none bg-transparent h-full px-4 text-base placeholder:text-[#93a2b7] focus:ring-0 text-[#111618] dark:text-white outline-none" id="password" placeholder="Enter your password" type="password" required/>
 <button aria-label="Toggle password visibility" class="px-4 h-full flex items-center justify-center text-[#617c89] hover:text-primary transition-colors cursor-pointer" type="button">
 <span class="material-symbols-outlined text-[20px]">visibility_off</span>
 </button>
