@@ -111,4 +111,19 @@
 </div>
 </div>
 </div>
+<script>
+  const passwordInput = document.getElementById("password");
+  const toggleButton = document.querySelector("button[aria-label='Toggle password visibility']");
+  const toggleIcon = toggleButton.querySelector("span");
+
+  toggleButton.addEventListener("click", () => {
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      toggleIcon.textContent = "visibility";
+    } else {
+      passwordInput.type = "password";
+      toggleIcon.textContent = "visibility_off";
+    }
+  });
+</script>
 </body></html>
