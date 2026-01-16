@@ -111,4 +111,29 @@
 </div>
 </div>
 </div>
+<script>
+  const passwordInput = document.getElementById('password');
+  // Select the button by its original ARIA label
+  const togglePasswordButton = document.querySelector('button[aria-label="Toggle password visibility"]');
+
+  if (passwordInput && togglePasswordButton) {
+    const togglePasswordIcon = togglePasswordButton.querySelector('span');
+
+    // Set the initial ARIA label to describe the action of showing the password
+    togglePasswordButton.setAttribute('aria-label', 'Show password');
+
+    togglePasswordButton.addEventListener('click', () => {
+      const isPassword = passwordInput.type === 'password';
+
+      // Toggle the input type
+      passwordInput.type = isPassword ? 'text' : 'password';
+
+      // Toggle the icon
+      togglePasswordIcon.textContent = isPassword ? 'visibility' : 'visibility_off';
+
+      // Update the ARIA label to describe the next action
+      togglePasswordButton.setAttribute('aria-label', isPassword ? 'Hide password' : 'Show password');
+    });
+  }
+</script>
 </body></html>
