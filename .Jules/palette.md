@@ -1,0 +1,3 @@
+## 2024-07-25 - Dynamic ARIA Labels for Toggle Buttons
+**Learning:** When implementing a toggle button (e.g., password visibility, dark mode), the `aria-label` must be updated dynamically to reflect the action the button will perform *next*, not its current state. For example, if the password is currently hidden, the label should be "Show password," because that is what will happen when the user clicks it. This provides clear, unambiguous context for screen reader users.
+**Action:** For all future toggle buttons, I will ensure the accompanying JavaScript updates the `aria-label` in lockstep with the visual and functional state changes.
