@@ -1,0 +1,3 @@
+## 2024-07-26 - Robust DOM Selection for Dynamic Elements
+**Learning:** When implementing client-side interactions that dynamically change an element's attributes (like `aria-label`), relying on those attributes for selection in verification scripts can cause them to fail. The locator becomes stale after the first interaction.
+**Action:** For interactive elements like toggles or buttons that change state, always add a stable, unique `id` attribute. This provides a robust hook for both the application's JavaScript and the Playwright verification scripts, preventing locator failures and making the tests more resilient to changes in descriptive attributes.
