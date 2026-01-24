@@ -66,10 +66,10 @@
 </div>
 <!-- Password Field -->
 <div class="flex flex-col gap-2">
-<label class="text-[#111618] dark:text-[#e0e0e0] text-sm font-semibold leading-normal" for="password">Password</label>
+<label class="text-[#111618] dark:text-[#e0e0e0] text-sm font-semibold leading-normal" for="password-input">Password</label>
 <div class="group flex items-center rounded-lg border border-[#dbe2e6] dark:border-[#3e4f59] bg-white dark:bg-[#101c22] focus-within:border-primary focus-within:ring-1 focus-within:ring-primary overflow-hidden h-12 sm:h-14 transition-colors">
-<input class="flex-1 border-none bg-transparent h-full px-4 text-base placeholder:text-[#93a2b7] focus:ring-0 text-[#111618] dark:text-white outline-none" id="password" placeholder="Enter your password" type="password"/>
-<button aria-label="Toggle password visibility" class="px-4 h-full flex items-center justify-center text-[#617c89] hover:text-primary transition-colors cursor-pointer" type="button">
+<input class="flex-1 border-none bg-transparent h-full px-4 text-base placeholder:text-[#93a2b7] focus:ring-0 text-[#111618] dark:text-white outline-none" id="password-input" placeholder="Enter your password" type="password"/>
+<button aria-label="Toggle password visibility" id="password-toggle-button" class="px-4 h-full flex items-center justify-center text-[#617c89] hover:text-primary transition-colors cursor-pointer" type="button">
 <span class="material-symbols-outlined text-[20px]">visibility_off</span>
 </button>
 </div>
@@ -111,4 +111,18 @@
 </div>
 </div>
 </div>
+<script>
+  const passwordInput = document.getElementById('password-input');
+  const passwordToggleButton = document.getElementById('password-toggle-button');
+  const passwordToggleIcon = passwordToggleButton.querySelector('.material-symbols-outlined');
+
+  if (passwordInput && passwordToggleButton && passwordToggleIcon) {
+    passwordToggleButton.addEventListener('click', () => {
+      const isPassword = passwordInput.type === 'password';
+      passwordInput.type = isPassword ? 'text' : 'password';
+      passwordToggleIcon.textContent = isPassword ? 'visibility' : 'visibility_off';
+      passwordToggleButton.setAttribute('aria-label', isPassword ? 'Hide password' : 'Show password');
+    });
+  }
+</script>
 </body></html>
