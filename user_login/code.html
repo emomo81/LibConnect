@@ -111,4 +111,29 @@
 </div>
 </div>
 </div>
+<script>
+  const passwordInput = document.getElementById('password');
+  if (passwordInput) {
+    const togglePasswordButton = passwordInput.nextElementSibling;
+    if (togglePasswordButton) {
+        const togglePasswordIcon = togglePasswordButton.querySelector('span');
+        if (togglePasswordIcon) {
+            togglePasswordButton.addEventListener('click', () => {
+                const isPassword = passwordInput.type === 'password';
+                if (isPassword) {
+                    passwordInput.type = 'text';
+                    togglePasswordIcon.textContent = 'visibility';
+                    togglePasswordButton.setAttribute('aria-label', 'Hide password');
+                } else {
+                    passwordInput.type = 'password';
+                    togglePasswordIcon.textContent = 'visibility_off';
+                    togglePasswordButton.setAttribute('aria-label', 'Show password');
+                }
+            });
+            // Set initial accessible label
+            togglePasswordButton.setAttribute('aria-label', 'Show password');
+        }
+    }
+  }
+</script>
 </body></html>
