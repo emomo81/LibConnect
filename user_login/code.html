@@ -111,4 +111,24 @@
 </div>
 </div>
 </div>
+<script>
+    const passwordInput = document.getElementById('password');
+    const togglePasswordButton = document.querySelector('[aria-label="Toggle password visibility"]');
+    const togglePasswordIcon = togglePasswordButton.querySelector('.material-symbols-outlined');
+
+    if (passwordInput && togglePasswordButton && togglePasswordIcon) {
+        togglePasswordButton.addEventListener('click', () => {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+
+            if (type === 'password') {
+                togglePasswordIcon.textContent = 'visibility_off';
+                togglePasswordButton.setAttribute('aria-label', 'Show password');
+            } else {
+                togglePasswordIcon.textContent = 'visibility';
+                togglePasswordButton.setAttribute('aria-label', 'Hide password');
+            }
+        });
+    }
+</script>
 </body></html>
