@@ -1,0 +1,3 @@
+## 2025-02-02 - Password Toggle Pattern Consistency
+**Learning:** In static HTML pages where components are duplicated, maintaining a consistent pattern for interactive elements like password toggles is crucial for both UX and accessibility. An icon-only toggle button must have a dynamic ARIA label that describes the *action* it will perform (e.g., "Show password" vs "Hide password").
+**Action:** Use a reusable JavaScript function like `setupToggle(inputId, toggleId)` to encapsulate the logic and ensure consistent behavior (input type swap, icon text change, ARIA label update) across multiple pages.
