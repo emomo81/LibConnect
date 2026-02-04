@@ -1,0 +1,3 @@
+## 2025-02-04 - Accessible Password Toggles in Static HTML
+**Learning:** In repositories with many standalone static HTML pages, non-semantic elements like `div` are often used for interactive icons, breaking keyboard accessibility and screen reader support. Implementing a consistent password visibility toggle pattern requires converting these to `button` elements and adding dynamic ARIA labels.
+**Action:** Always check for `div` or `span` elements with click listeners or "cursor-pointer" classes and convert them to semantic `button` elements. Use a reusable `setupToggle` function in a `<script>` tag at the end of the `body` to keep the logic clean and consistent across pages.
