@@ -1,0 +1,3 @@
+## 2025-01-24 - [Accessible Password Toggles]
+**Learning:** In static HTML projects, interactive elements are often implemented using non-semantic tags like `div` for layout convenience, which breaks keyboard accessibility. Converting these to `button` elements and adding dynamic ARIA labels that describe the *action* (e.g., "Show password") rather than the *state* (e.g., "Password hidden") significantly improves the experience for screen reader and keyboard users.
+**Action:** Always check if icon-only toggles are semantic `button` elements and ensure they have descriptive, action-oriented ARIA labels.
