@@ -8,7 +8,6 @@
 <script type="text/javascript" nonce="bc035baa08054c1cbc41ff71102" src="//local.adguard.org?ts=1767391800491&amp;name=AdGuard%20Extra&amp;type=user-script"></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -69,8 +68,8 @@
 <label class="text-[#111618] dark:text-[#e0e0e0] text-sm font-semibold leading-normal" for="password">Password</label>
 <div class="group flex items-center rounded-lg border border-[#dbe2e6] dark:border-[#3e4f59] bg-white dark:bg-[#101c22] focus-within:border-primary focus-within:ring-1 focus-within:ring-primary overflow-hidden h-12 sm:h-14 transition-colors">
 <input class="flex-1 border-none bg-transparent h-full px-4 text-base placeholder:text-[#93a2b7] focus:ring-0 text-[#111618] dark:text-white outline-none" id="password" placeholder="Enter your password" type="password"/>
-<button aria-label="Toggle password visibility" class="px-4 h-full flex items-center justify-center text-[#617c89] hover:text-primary transition-colors cursor-pointer" type="button">
-<span class="material-symbols-outlined text-[20px]">visibility_off</span>
+<button aria-label="Show password" class="px-4 h-full flex items-center justify-center text-[#617c89] hover:text-primary transition-colors cursor-pointer" id="password-toggle" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
 </button>
 </div>
 <div class="flex justify-end mt-1">
@@ -111,4 +110,28 @@
 </div>
 </div>
 </div>
+<script>
+    function setupPasswordToggle(inputId, toggleId) {
+      const passwordInput = document.getElementById(inputId);
+      const toggleButton = document.getElementById(toggleId);
+
+      if (!passwordInput || !toggleButton) return;
+
+      toggleButton.addEventListener('click', () => {
+        const isPassword = passwordInput.type === 'password';
+        passwordInput.type = isPassword ? 'text' : 'password';
+
+        const icon = toggleButton.querySelector('.material-symbols-outlined');
+        if (icon) {
+          icon.textContent = isPassword ? 'visibility_off' : 'visibility';
+        }
+
+        toggleButton.setAttribute('aria-label', isPassword ? 'Hide password' : 'Show password');
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      setupPasswordToggle('password', 'password-toggle');
+    });
+</script>
 </body></html>
