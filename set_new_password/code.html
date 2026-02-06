@@ -12,7 +12,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
 <!-- Material Symbols -->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <!-- Tailwind CSS -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <!-- Theme Configuration -->
@@ -94,11 +93,11 @@
                     </label>
 <div class="flex w-full items-stretch rounded-lg group focus-within:ring-1 focus-within:ring-primary">
 <input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-l-lg text-[#181118] dark:text-white focus:outline-0 focus:ring-0 border border-r-0 border-[#d1c4d1] dark:border-[#543b54] bg-white dark:bg-[#271c27] h-12 md:h-14 placeholder:text-[#6b586b] dark:placeholder:text-[#b99db9] px-[15px] text-base font-normal leading-normal" id="new-password" placeholder="Enter your new password" type="password" value=""/>
-<div class="flex items-center justify-center px-[15px] rounded-r-lg border border-l-0 border-[#d1c4d1] dark:border-[#543b54] bg-white dark:bg-[#271c27] cursor-pointer hover:bg-gray-50 dark:hover:bg-[#342634] transition-colors">
+<button aria-label="Show password" class="flex items-center justify-center px-[15px] rounded-r-lg border border-l-0 border-[#d1c4d1] dark:border-[#543b54] bg-white dark:bg-[#271c27] cursor-pointer hover:bg-gray-50 dark:hover:bg-[#342634] transition-colors" id="new-password-toggle" type="button">
 <span class="material-symbols-outlined text-[#6b586b] dark:text-[#b99db9] text-[24px]">
                                 visibility
                             </span>
-</div>
+</button>
 </div>
 <!-- Helper Text -->
 <p class="text-[#6b586b] dark:text-[#b99db9] text-xs font-normal leading-normal pt-1 pl-1">
@@ -112,11 +111,11 @@
                     </label>
 <div class="flex w-full items-stretch rounded-lg group focus-within:ring-1 focus-within:ring-primary">
 <input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-l-lg text-[#181118] dark:text-white focus:outline-0 focus:ring-0 border border-r-0 border-[#d1c4d1] dark:border-[#543b54] bg-white dark:bg-[#271c27] h-12 md:h-14 placeholder:text-[#6b586b] dark:placeholder:text-[#b99db9] px-[15px] text-base font-normal leading-normal" id="confirm-password" placeholder="Re-enter your new password" type="password" value=""/>
-<div class="flex items-center justify-center px-[15px] rounded-r-lg border border-l-0 border-[#d1c4d1] dark:border-[#543b54] bg-white dark:bg-[#271c27] cursor-pointer hover:bg-gray-50 dark:hover:bg-[#342634] transition-colors">
+<button aria-label="Show password" class="flex items-center justify-center px-[15px] rounded-r-lg border border-l-0 border-[#d1c4d1] dark:border-[#543b54] bg-white dark:bg-[#271c27] cursor-pointer hover:bg-gray-50 dark:hover:bg-[#342634] transition-colors" id="confirm-password-toggle" type="button">
 <span class="material-symbols-outlined text-[#6b586b] dark:text-[#b99db9] text-[24px]">
                                 visibility
                             </span>
-</div>
+</button>
 </div>
 </div>
 <!-- Submit Button -->
@@ -134,4 +133,29 @@
 </form>
 </div>
 </div>
+<script>
+    function setupPasswordToggle(inputId, toggleId) {
+      const passwordInput = document.getElementById(inputId);
+      const toggleButton = document.getElementById(toggleId);
+
+      if (!passwordInput || !toggleButton) return;
+
+      toggleButton.addEventListener('click', () => {
+        const isPassword = passwordInput.type === 'password';
+        passwordInput.type = isPassword ? 'text' : 'password';
+
+        const icon = toggleButton.querySelector('.material-symbols-outlined');
+        if (icon) {
+          icon.textContent = isPassword ? 'visibility_off' : 'visibility';
+        }
+
+        toggleButton.setAttribute('aria-label', isPassword ? 'Hide password' : 'Show password');
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      setupPasswordToggle('new-password', 'new-password-toggle');
+      setupPasswordToggle('confirm-password', 'confirm-password-toggle');
+    });
+</script>
 </body></html>
